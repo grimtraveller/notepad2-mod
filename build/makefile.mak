@@ -138,6 +138,7 @@ SCI_LEX_OBJ = \
     $(SCI_LEX_OBJDIR)\LexErrorList.obj \
     $(SCI_LEX_OBJDIR)\LexHTML.obj \
     $(SCI_LEX_OBJDIR)\LexInno.obj \
+    $(SCI_LEX_OBJDIR)\LexJSON.obj \
     $(SCI_LEX_OBJDIR)\LexLaTeX.obj \
     $(SCI_LEX_OBJDIR)\LexLua.obj \
     $(SCI_LEX_OBJDIR)\LexMake.obj \
