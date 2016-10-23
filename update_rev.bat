@@ -24,7 +24,7 @@ COLOR 0C
 TITLE ERROR
 ECHO MSYS (bash.exe) wasn't found. Create a file build.user.bat and set the variable there.
 ECHO.
-ECHO SET "MSYS=H:\progs\MSYS"
+ECHO SET "MSYS=C:\msys64\usr\"
 ECHO. & ECHO.
 ECHO Press any key to exit...
 PAUSE >NUL

@@ -235,7 +235,7 @@
     <ResourceCompile Include="Notepad2.rc" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\scintilla\Scintilla.vcxproj">
+    <ProjectReference Include="..\build\Scintilla.vcxproj">
       <Project>{5877b917-512b-49f5-b514-1b4159e7a9ca}</Project>
     </ProjectReference>
   </ItemGroup>
