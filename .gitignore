@@ -273,7 +273,7 @@ __pycache__/
 
 # Notepad2 specific
 /bin
-/build.user.bat
+/build/build.user.bat
 /build/cov-int
 /build/Notepad2-mod.lzma
 /build/Notepad2-mod.tar

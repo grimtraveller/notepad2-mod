@@ -21,8 +21,8 @@
 svnrev=760
 svnhash="0cd53aab71b006820233224bbf14c2b18b2caca6"
 
-versionfile="./src/VersionRev.h"
-manifestfile="./res/Notepad2.exe.manifest"
+versionfile="../src/VersionRev.h"
+manifestfile="../res/Notepad2.exe.manifest"
 
 # If we are not inside a git repo use hardcoded values
 if ! git rev-parse --git-dir > /dev/null 2>&1; then

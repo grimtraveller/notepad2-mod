@@ -2,7 +2,7 @@
 
 > *A modified version (fork) of Notepad2 based on Kai Liu's and other people's patches.*
 
-[![Build status](https://img.shields.io/appveyor/ci/XhmikosR/notepad2-mod/master.svg)](https://ci.appveyor.com/project/XhmikosR/notepad2-mod/branch/master)
+[![Build status](https://ci.appveyor.com/api/projects/status/09rkgo5j2nqnqqdy?svg=true)](https://ci.appveyor.com/project/McNeight/notepad2-mod)
 [![Coverity Scan Build Status](https://img.shields.io/coverity/scan/1113.svg)](https://scan.coverity.com/projects/1113)
 
 ## Changes compared to the official Notepad2:

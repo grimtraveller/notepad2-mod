@@ -110,7 +110,7 @@
       <TargetMachine>MachineX86</TargetMachine>
     </Link>
     <PreBuildEvent>
-      <Command>..\update_rev.bat</Command>
+      <Command>$(SolutionDir)update_rev.bat</Command>
       <Message>Generating revision number...</Message>
     </PreBuildEvent>
     <ResourceCompile>
@@ -136,7 +136,7 @@
       <TargetMachine>MachineX64</TargetMachine>
     </Link>
     <PreBuildEvent>
-      <Command>..\update_rev.bat</Command>
+      <Command>$(SolutionDir)update_rev.bat</Command>
       <Message>Generating revision number...</Message>
     </PreBuildEvent>
     <ResourceCompile>
@@ -164,7 +164,7 @@
       <TargetMachine>MachineX86</TargetMachine>
     </Link>
     <PreBuildEvent>
-      <Command>..\update_rev.bat</Command>
+      <Command>$(SolutionDir)update_rev.bat</Command>
       <Message>Generating revision number...</Message>
     </PreBuildEvent>
     <ResourceCompile>
@@ -191,7 +191,7 @@
       <TargetMachine>MachineX64</TargetMachine>
     </Link>
     <PreBuildEvent>
-      <Command>..\update_rev.bat</Command>
+      <Command>$(SolutionDir)update_rev.bat</Command>
       <Message>Generating revision number...</Message>
     </PreBuildEvent>
     <ResourceCompile>
