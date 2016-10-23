@@ -33,11 +33,13 @@
   - Lua Script
   - Makefiles
   - Markdown
+  - MATLAB
   - NSIS Script
   - Pascal
   - Perl Script
   - PowerShell Script
   - Python Script
+  - Registry Files (.reg)
   - Resource Script (.rc)
   - Ruby Script
   - SQL
