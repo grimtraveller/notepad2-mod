@@ -46,7 +46,7 @@ KEYWORDLIST KeyWords_NULL = {
 "", "", "", "", "", "", "", "", "" };
 
 
-EDITLEXER lexDefault = { SCLEX_NULL, 63000, L"Default Text", L"txt; text; wtx; log; asc; doc", L"", &KeyWords_NULL, {
+EDITLEXER lexNULL = { SCLEX_NULL, 63000, L"Default Text", L"txt; text; wtx; log; asc; doc", L"", &KeyWords_NULL, {
                 /*  0 */ { STYLE_DEFAULT, 63100, L"Default Style", L"font:Default; size:10", L"" },
                 /*  1 */ { STYLE_LINENUMBER, 63101, L"Margins and Line Numbers", L"size:-2; fore:#FF0000", L"" },
                 /*  2 */ { STYLE_BRACELIGHT, 63102, L"Matching Braces", L"size:+1; bold; fore:#FF0000", L"" },
@@ -86,21 +86,21 @@ KEYWORDLIST KeyWords_HTML = {
 "disabled div dl download draggable dropzone dt em embed enctype event eventsource face fieldset "
 "figcaption figure file font footer for form formaction formenctype formmethod formnovalidate "
 "formtarget frame frameborder frameset h1 h2 h3 h4 h5 h6 head header headers height hgroup hidden "
-"high hr href hreflang hspace html http-equiv i icon id iframe image img input ins isindex ismap itemprop "
-"kbd keygen keytype kind label lang language leftmargin legend li link list longdesc loop low main"
-"manifest map marginheight marginwidth mark max maxlength media mediagroup menu menuitem meta meter method "
-"min multiple muted name nav noframes nohref noresize noscript noshade novalidate nowrap object ol onabort "
-"onafterprint onbeforeprint onbeforeunload onblur oncancel oncanplay oncanplaythrough onchange onclick "
-"onclose oncontextmenu oncuechange ondblclick ondrag ondragend ondragenter ondragleave ondragover "
-"ondragstart ondrop ondurationchange onemptied onended onerror onfocus onformchange onforminput "
-"onhashchange oninput oninvalid onkeydown onkeypress onkeyup onload onloadeddata onloadedmetadata "
+"high hr href hreflang hspace html http-equiv i icon id iframe image img input ins integrity isindex "
+"ismap itemprop itemscope itemtype kbd keygen keytype kind label lang language leftmargin legend li link "
+"list longdesc loop low main manifest map marginheight marginwidth mark max maxlength media mediagroup "
+"menu menuitem meta meter method min multiple muted name nav noframes nohref noresize noscript noshade "
+"novalidate nowrap object ol onabort onafterprint onbeforeprint onbeforeunload onblur oncancel oncanplay "
+"oncanplaythrough onchange onclick onclose oncontextmenu oncuechange ondblclick ondrag ondragend ondragenter "
+"ondragleave ondragover ondragstart ondrop ondurationchange onemptied onended onerror onfocus onformchange "
+"onforminput onhashchange oninput oninvalid onkeydown onkeypress onkeyup onload onloadeddata onloadedmetadata "
 "onloadstart onmessage onmousedown onmousemove onmouseout onmouseover onmouseup onmousewheel "
 "onoffline ononline onpagehide onpageshow onpause onplay onplaying onpopstate onprogress "
 "onratechange onreadystatechange onredo onreset onresize onscroll onseeked onseeking onselect "
 "onshow onstalled onstorage onsubmit onsuspend ontimeupdate onundo onunload onvolumechange "
 "onwaiting open optgroup optimum option output p param password pattern ping placeholder poster "
-"pre preload profile progress prompt pubdate public q radio radiogroup readonly rel required "
-"reset rev reversed rows rowspan rp rt ruby rules s samp sandbox scheme scope scoped script "
+"pre prefix preload profile progress prompt property pubdate public q radio radiogroup readonly rel "
+"required reset rev reversed role rows rowspan rp rt ruby rules s samp sandbox scheme scope scoped script "
 "scrolling seamless section select selected shape size sizes small source span spellcheck src "
 "srcdoc srclang standby start step strike strong style sub submit summary sup tabindex table "
 "target tbody td text textarea tfoot th thead time title topmargin tr track translate tt type "
@@ -238,10 +238,10 @@ EDITLEXER lexXML = { SCLEX_XML, 63002, L"XML Document", L"xml; xsl; rss; svg; xu
 
 
 KEYWORDLIST KeyWords_CSS = {
-"alignment-adjust alignment-baseline animation animation-delay "
+"align-content align-items align-self alignment-adjust alignment-baseline animation animation-delay "
 "animation-direction animation-duration animation-fill-mode animation-iteration-count animation-name "
 "animation-play-state animation-timing-function appearance ascent azimuth backface-visibility "
-"background background-attachment background-break background-clip background-color "
+"background background-attachment background-blend-mode background-break background-clip background-color "
 "background-image background-origin background-position background-repeat background-size "
 "baseline baseline-shift bbox binding bleed bookmark-label bookmark-level bookmark-state "
 "bookmark-target border border-bottom border-bottom-color border-bottom-left-radius "
@@ -259,32 +259,32 @@ KEYWORDLIST KeyWords_CSS = {
 "content counter-increment counter-reset crop cue cue-after cue-before cursor definition-src descent "
 "direction display dominant-baseline drop-initial-after-adjust drop-initial-after-align "
 "drop-initial-before-adjust drop-initial-before-align drop-initial-size drop-initial-value "
-"elevation empty-cells fit fit-position flex flex-basis flex-direction flex-flow flex-grow flex-shrink "
-"flex-wrap float float-offset flow-from flow-into font font-family font-feature-settings font-size "
+"elevation empty-cells fill fit fit-position flex flex-basis flex-direction flex-flow flex-grow flex-shrink "
+"flex-wrap float float-offset flow-from flow-into font font-family font-feature-settings font-kerning font-size "
 "font-size-adjust font-stretch font-style font-synthesis font-variant font-weight grid-columns grid-rows "
 "hanging-punctuation height hyphenate-after hyphenate-before hyphenate-character hyphenate-limit-chars "
-"hyphenate-limit-last hyphenate-limit-zone hyphenate-lines hyphenate-resource hyphens icon "
-"image-orientation  image-resolution inline-box-align insert-position interpret-as left letter-spacing "
+"hyphenate-limit-last hyphenate-limit-zone hyphenate-lines hyphenate-resource hyphens icon image-orientation "
+"image-resolution ime-mode inline-box-align insert-position interpret-as justify-content left letter-spacing "
 "line-height line-stacking line-stacking-ruby line-stacking-shift line-stacking-strategy list-style "
 "list-style-image list-style-position list-style-type make-element margin margin-bottom margin-left "
-"margin-right margin-top mark mark-after mark-before marker-offset marks marquee-direction "
-"marquee-play-count marquee-speed marquee-style mathline max-height max-width media min-height min-width "
+"margin-right margin-top mark mark-after mark-before marker-offset marks marquee-direction marquee-play-count "
+"marquee-speed marquee-style mask mask-type mathline max-height max-width media min-height min-width "
 "move-to nav-down nav-index nav-left nav-right nav-up object-fit object-position opacity order orphans "
 "outline outline-color outline-offset outline-style outline-width overflow overflow-style overflow-wrap "
 "overflow-x overflow-y padding padding-bottom padding-left padding-right padding-top page page-break-after "
 "page-break-before page-break-inside page-policy panose-1 pause pause-after pause-before perspective "
-"perspective-origin phonemes pitch pitch-range play-during position presentation-level prototype "
+"perspective-origin phonemes pitch pitch-range play-during pointer-events position presentation-level prototype "
 "prototype-insert-policy prototype-insert-position punctuation-trim quotes region-overflow "
 "rendering-intent resize rest rest-after rest-before richness right rotation rotation-point ruby-align "
 "ruby-overhang ruby-position ruby-span shape-image-threshold shape-inside shape-outside size slope speak "
-"speak-header speak-numeral speak-punctuation speech-rate src stemh stemv stress string-set table-layout "
-"target target-name target-new target-position text-align text-align-last text-decoration "
-"text-decoration-color text-decoration-line text-decoration-style text-emphasis text-height text-indent "
-"text-justify text-outline text-overflow text-replace text-shadow text-transform text-wrap top topline transform "
-"transform-origin transform-style transition transition-delay transition-duration transition-property "
+"speak-header speak-numeral speak-punctuation speech-rate src stemh stemv stress string-set tab-size table-layout "
+"target target-name target-new target-position text-align text-align-last text-decoration text-decoration-color "
+"text-decoration-line text-decoration-style text-emphasis text-height text-indent text-justify text-outline "
+"text-overflow text-rendering text-replace text-shadow text-transform text-underline-position text-wrap top topline "
+"transform transform-origin transform-style transition transition-delay transition-duration transition-property "
 "transition-timing-function unicode-bidi unicode-range units-per-em vertical-align visibility "
 "voice-balance voice-duration voice-family voice-pitch voice-pitch-range voice-rate voice-stress "
-"voice-volume volume white-space white-space-collapse widows width widths word-break word-spacing "
+"voice-volume volume white-space white-space-collapse widows width widths will-change word-break word-spacing "
 "word-wrap wrap wrap-flow wrap-margin wrap-padding wrap-through writing-mode x-height z-index",
 "active after before checked choices default disabled empty enabled first first-child first-letter "
 "first-line first-of-type focus hover indeterminate in-range invalid lang last-child last-of-type left "
@@ -614,7 +614,7 @@ EDITLEXER lexVB = { SCLEX_VB, 63009, L"Visual Basic", L"vb; bas; frm; cls; ctl; 
 KEYWORDLIST KeyWords_JS = {
 "abstract boolean break byte case catch char class const continue debugger default delete do "
 "double else enum export extends false final finally float for function goto if implements "
-"import in instanceof int interface long native new null package private protected public "
+"import in instanceof int interface let long native new null package private protected public "
 "return short static super switch synchronized this throw throws transient true try typeof var "
 "void volatile while with",
 "", "", "", "", "", "", "", "" };
@@ -862,11 +862,11 @@ EDITLEXER lexPL = { SCLEX_PERL, 63014, L"Perl Script", L"pl; pm; cgi; pod", L"",
                     { -1, 00000, L"", L"", L"" } } };
 
 
-KEYWORDLIST KeyWords_INI = {
+KEYWORDLIST KeyWords_PROPS = {
 "", "", "", "", "", "", "", "", "" };
 
 
-EDITLEXER lexINI = { SCLEX_PROPERTIES, 63015, L"Configuration Files", L"ini; inf; reg; cfg; properties; oem; sif; url; sed; theme", L"", &KeyWords_INI, {
+EDITLEXER lexPROPS = { SCLEX_PROPERTIES, 63015, L"Configuration Files", L"ini; inf; cfg; properties; oem; sif; url; sed; theme", L"", &KeyWords_INI, {
                      { STYLE_DEFAULT, 63126, L"Default", L"", L"" },
                      //{ SCE_PROPS_DEFAULT, L"Default", L"", L"" },
                      { SCE_PROPS_COMMENT, 63127, L"Comment", L"fore:#008000", L"" },
@@ -983,52 +983,114 @@ EDITLEXER lexPY = { SCLEX_PYTHON, 63019, L"Python Script", L"py; pyw", L"", &Key
 
 
 KEYWORDLIST KeyWords_CONF = {
-"acceptmutex acceptpathinfo accessconfig accessfilename action addalt addaltbyencoding addaltbytype addcharset adddefaultcharset "
-"adddescription addencoding addhandler addicon addiconbyencoding addiconbytype addinputfilter addlanguage addmodule addmoduleinfo "
-"addoutputfilter addoutputfilterbytype addtype agentlog alias aliasmatch all allow allowconnect allowencodedslashes allowoverride "
-"anonymous anonymous_authoritative anonymous_logemail anonymous_mustgiveemail anonymous_nouserid anonymous_verifyemail "
-"assignuserid authauthoritative authdbauthoritative authdbgroupfile authdbmauthoritative authdbmgroupfile authdbmtype "
-"authdbmuserfile authdbuserfile authdigestalgorithm authdigestdomain authdigestfile authdigestgroupfile authdigestnccheck "
-"authdigestnonceformat authdigestnoncelifetime authdigestqop authdigestshmemsize authgroupfile authldapauthoritative "
-"authldapbinddn authldapbindpassword authldapcharsetconfig authldapcomparednonserver authldapdereferencealiases authldapenabled "
-"authldapfrontpagehack authldapgroupattribute authldapgroupattributeisdn authldapremoteuserisdn authldapurl authname authtype "
-"authuserfile bindaddress browsermatch browsermatchnocase bs2000account bufferedlogs cachedefaultexpire cachedirlength "
-"cachedirlevels cachedisable cacheenable cacheexpirycheck cachefile cacheforcecompletion cachegcclean cachegcdaily "
-"cachegcinterval cachegcmemusage cachegcunused cacheignorecachecontrol cacheignoreheaders cacheignorenolastmod "
-"cachelastmodifiedfactor cachemaxexpire cachemaxfilesize cacheminfilesize cachenegotiateddocs cacheroot cachesize cachetimemargin "
-"cgimapextension charsetdefault charsetoptions charsetsourceenc checkspelling childperuserid clearmodulelist contentdigest "
-"cookiedomain cookieexpires cookielog cookiename cookiestyle cookietracking coredumpdirectory customlog dav davdepthinfinity "
-"davlockdb davmintimeout defaulticon defaultlanguage defaulttype define deflatebuffersize deflatecompressionlevel "
-"deflatefilternote deflatememlevel deflatewindowsize deny directory directoryindex directorymatch directoryslash documentroot "
-"dumpioinput dumpiooutput enableexceptionhook enablemmap enablesendfile errordocument errorlog example expiresactive "
-"expiresbytype expiresdefault extendedstatus extfilterdefine extfilteroptions fancyindexing fileetag files filesmatch "
-"forcelanguagepriority forcetype forensiclog from group header headername hostnamelookups identitycheck ifdefine ifmodule "
-"imapbase imapdefault imapmenu include indexignore indexoptions indexorderdefault isapiappendlogtoerrors isapiappendlogtoquery "
-"isapicachefile isapifakeasync isapilognotsupported isapireadaheadbuffer keepalive keepalivetimeout languagepriority "
-"ldapcacheentries ldapcachettl ldapconnectiontimeout ldapopcacheentries ldapopcachettl ldapsharedcachefile ldapsharedcachesize "
-"ldaptrustedca ldaptrustedcatype limit limitexcept limitinternalrecursion limitrequestbody limitrequestfields "
-"limitrequestfieldsize limitrequestline limitxmlrequestbody listen listenbacklog loadfile loadmodule location locationmatch "
-"lockfile logformat loglevel maxclients maxkeepaliverequests maxmemfree maxrequestsperchild maxrequestsperthread maxspareservers "
-"maxsparethreads maxthreads maxthreadsperchild mcachemaxobjectcount mcachemaxobjectsize mcachemaxstreamingbuffer "
-"mcacheminobjectsize mcacheremovalalgorithm mcachesize metadir metafiles metasuffix mimemagicfile minspareservers minsparethreads "
-"mmapfile modmimeusepathinfo multiviewsmatch namevirtualhost nocache noproxy numservers nwssltrustedcerts nwsslupgradeable "
-"options order passenv pidfile port protocolecho proxy proxybadheader proxyblock proxydomain proxyerroroverride proxyiobuffersize "
-"proxymatch proxymaxforwards proxypass proxypassreverse proxypreservehost proxyreceivebuffersize proxyremote proxyremotematch "
-"proxyrequests proxytimeout proxyvia qsc readmename redirect redirectmatch redirectpermanent redirecttemp refererignore "
-"refererlog removecharset removeencoding removehandler removeinputfilter removelanguage removeoutputfilter removetype "
-"requestheader require resourceconfig rewritebase rewritecond rewriteengine rewritelock rewritelog rewriteloglevel rewritemap "
-"rewriteoptions rewriterule rlimitcpu rlimitmem rlimitnproc satisfy scoreboardfile script scriptalias scriptaliasmatch "
-"scriptinterpretersource scriptlog scriptlogbuffer scriptloglength scriptsock securelisten sendbuffersize serveradmin serveralias "
-"serverlimit servername serverpath serverroot serversignature servertokens servertype setenv setenvif setenvifnocase sethandler "
-"setinputfilter setoutputfilter singlelisten ssiendtag ssierrormsg ssistarttag ssitimeformat ssiundefinedecho "
-"sslcacertificatefile sslcacertificatepath sslcarevocationfile sslcarevocationpath sslcertificatechainfile sslcertificatefile "
-"sslcertificatekeyfile sslciphersuite sslengine sslmutex ssloptions sslpassphrasedialog sslprotocol sslproxycacertificatefile "
-"sslproxycacertificatepath sslproxycarevocationfile sslproxycarevocationpath sslproxyciphersuite sslproxyengine "
-"sslproxymachinecertificatefile sslproxymachinecertificatepath sslproxyprotocol sslproxyverify sslproxyverifydepth sslrandomseed "
-"sslrequire sslrequiressl sslsessioncache sslsessioncachetimeout sslusername sslverifyclient sslverifydepth startservers "
-"startthreads suexecusergroup threadlimit threadsperchild threadstacksize timeout transferlog typesconfig unsetenv "
-"usecanonicalname user userdir virtualdocumentroot virtualdocumentrootip virtualhost virtualscriptalias virtualscriptaliasip "
-"win32disableacceptex xbithack",
+"acceptfilter acceptmutex acceptpathinfo accessconfig accessfilename action addalt addaltbyencoding "
+"addaltbytype addcharset adddefaultcharset adddescription addencoding addhandler addicon addiconbyencoding "
+"addiconbytype addinputfilter addlanguage addmodule addmoduleinfo addoutputfilter addoutputfilterbytype "
+"addtype agentlog alias aliasmatch all allow allowconnect allowencodedslashes allowmethods allowoverride "
+"allowoverridelist anonymous anonymous_authoritative anonymous_logemail anonymous_mustgiveemail "
+"anonymous_nouserid anonymous_verifyemail assignuserid asyncrequestworkerfactor authauthoritative "
+"authbasicauthoritative authbasicfake authbasicprovider authbasicusedigestalgorithm authdbauthoritative "
+"authdbduserpwquery authdbduserrealmquery authdbgroupfile authdbmauthoritative authdbmgroupfile "
+"authdbmtype authdbmuserfile authdbuserfile authdigestalgorithm authdigestdomain authdigestfile "
+"authdigestgroupfile authdigestnccheck authdigestnonceformat authdigestnoncelifetime authdigestprovider "
+"authdigestqop authdigestshmemsize authformauthoritative authformbody authformdisablenostore authformfakebasicauth "
+"authformlocation authformloginrequiredlocation authformloginsuccesslocation authformlogoutlocation authformmethod "
+"authformmimetype authformpassword authformprovider authformsitepassphrase authformsize authformusername "
+"authgroupfile authldapauthoritative authldapauthorizeprefix authldapbindauthoritative authldapbinddn "
+"authldapbindpassword authldapcharsetconfig authldapcompareasuser authldapcomparednonserver "
+"authldapdereferencealiases authldapenabled authldapfrontpagehack authldapgroupattribute "
+"authldapgroupattributeisdn authldapinitialbindasuser authldapinitialbindpattern authldapmaxsubgroupdepth "
+"authldapremoteuserattribute authldapremoteuserisdn authldapsearchasuser authldapsubgroupattribute "
+"authldapsubgroupclass authldapurl authmerging authname authncachecontext authncacheenable authncacheprovidefor "
+"authncachesocache authncachetimeout authnprovideralias authnzfcgicheckauthnprovider authnzfcgidefineprovider "
+"authtype authuserfile authzdbdlogintoreferer authzdbdquery authzdbdredirectquery authzdbmtype "
+"authzsendforbiddenonfailure balancergrowth balancerinherit balancermember balancerpersist bindaddress "
+"browsermatch browsermatchnocase bs2000account bufferedlogs buffersize cachedefaultexpire cachedetailheader "
+"cachedirlength cachedirlevels cachedisable cacheenable cacheexpirycheck cachefile cacheforcecompletion "
+"cachegcclean cachegcdaily cachegcinterval cachegcmemusage cachegcunused cacheheader cacheignorecachecontrol "
+"cacheignoreheaders cacheignorenolastmod cacheignorequerystring cacheignoreurlsessionidentifiers "
+"cachekeybaseurl cachelastmodifiedfactor cachelock cachelockmaxage cachelockpath cachemaxexpire "
+"cachemaxfilesize cacheminexpire cacheminfilesize cachenegotiateddocs cachequickhandler cachereadsize "
+"cachereadtime cacheroot cachesize cachesocache cachesocachemaxsize cachesocachemaxtime cachesocachemintime "
+"cachesocachereadsize cachesocachereadtime cachestaleonerror cachestoreexpired cachestorenostore cachestoreprivate "
+"cachetimemargin cgidscripttimeout cgimapextension cgipassauth cgivar charsetdefault charsetoptions charsetsourceenc "
+"checkcaseonly checkspelling childperuserid chrootdir clearmodulelist contentdigest cookiedomain cookieexpires "
+"cookielog cookiename cookiestyle cookietracking coredumpdirectory customlog dav davdepthinfinity davgenericlockdb "
+"davlockdb davmintimeout dbdexptime dbdinitsql dbdkeep dbdmax dbdmin dbdparams dbdpersist dbdpreparesql dbdriver "
+"defaulticon defaultlanguage defaultruntimedir defaulttype define deflatebuffersize deflatecompressionlevel "
+"deflatefilternote deflateinflatelimitrequestbody deflateinflateratioburst deflateinflateratiolimit deflatememlevel "
+"deflatewindowsize deny directory directorycheckhandler directoryindex directoryindexredirect directorymatch "
+"directoryslash documentroot dtraceprivileges dumpioinput dumpiooutput else elseif enableexceptionhook enablemmap "
+"enablesendfile error errordocument errorlog errorlogformat example expiresactive expiresbytype expiresdefault "
+"extendedstatus extfilterdefine extfilteroptions fallbackresource fancyindexing fileetag files filesmatch "
+"filterchain filterdeclare filterprotocol filterprovider filtertrace forcelanguagepriority forcetype forensiclog "
+"from globallog gracefulshutdowntimeout group h2direct h2maxsessionstreams h2maxworkeridleseconds h2maxworkers "
+"h2minworkers h2moderntlsonly h2push h2pushdiarysize h2pushpriority h2serializeheaders h2sessionextrafiles "
+"h2streammaxmemsize h2tlscooldownsecs h2tlswarmupsize h2upgrade h2windowsize header headername heartbeataddress "
+"heartbeatlisten heartbeatmaxservers heartbeatstorage hostnamelookups identitycheck identitychecktimeout "
+"if ifdefine ifmodule ifversion imapbase imapdefault imapmenu include includeoptional indexheadinsert "
+"indexignore indexignorereset indexoptions indexorderdefault indexstylesheet inputsed isapiappendlogtoerrors "
+"isapiappendlogtoquery isapicachefile isapifakeasync isapilognotsupported isapireadaheadbuffer keepalive "
+"keepalivetimeout keptbodysize languagepriority ldapcacheentries ldapcachettl ldapconnectionpoolttl "
+"ldapconnectiontimeout ldaplibrarydebug ldapopcacheentries ldapopcachettl ldapreferralhoplimit ldapreferrals "
+"ldapretries ldapretrydelay ldapsharedcachefile ldapsharedcachesize ldaptimeout ldaptrustedca ldaptrustedcatype "
+"ldaptrustedclientcert ldaptrustedglobalcert ldaptrustedmode ldapverifyservercert limit limitexcept "
+"limitinternalrecursion limitrequestbody limitrequestfields limitrequestfieldsize limitrequestline "
+"limitxmlrequestbody listen listenbacklog listencoresbucketsratio loadfile loadmodule location "
+"locationmatch lockfile logformat logiotrackttfb loglevel logmessage luaauthzprovider luacodecache "
+"luahookaccesschecker luahookauthchecker luahookcheckuserid luahookfixups luahookinsertfilter luahooklog "
+"luahookmaptostorage luahooktranslatename luahooktypechecker luainherit luainputfilter luamaphandler "
+"luaoutputfilter luapackagecpath luapackagepath luaquickhandler luaroot luascope macro maxclients "
+"maxconnectionsperchild maxkeepaliverequests maxmemfree maxrangeoverlaps maxrangereversals maxranges "
+"maxrequestsperchild maxrequestsperthread maxrequestworkers maxspareservers maxsparethreads maxthreads "
+"maxthreadsperchild mcachemaxobjectcount mcachemaxobjectsize mcachemaxstreamingbuffer mcacheminobjectsize "
+"mcacheremovalalgorithm mcachesize memcacheconnttl mergetrailers metadir metafiles metasuffix mimemagicfile "
+"minspareservers minsparethreads mmapfile modemstandard modmimeusepathinfo multiviewsmatch mutex namevirtualhost "
+"nocache noproxy numservers nwssltrustedcerts nwsslupgradeable options order outputsed passenv pidfile port "
+"privilegesmode protocol protocolecho protocols protocolshonororder proxy proxyaddheaders proxybadheader "
+"proxyblock proxydomain proxyerroroverride proxyexpressdbmfile proxyexpressdbmtype proxyexpressenable "
+"proxyftpdircharset proxyftpescapewildcards proxyftplistonwildcard proxyhcexpr proxyhctemplate proxyhctpsize "
+"proxyhtmlbufsize proxyhtmlcharsetout proxyhtmldoctype proxyhtmlenable proxyhtmlevents proxyhtmlextended "
+"proxyhtmlfixups proxyhtmlinterp proxyhtmllinks proxyhtmlmeta proxyhtmlstripcomments proxyhtmlurlmap "
+"proxyiobuffersize proxymatch proxymaxforwards proxypass proxypassinherit proxypassinterpolateenv "
+"proxypassmatch proxypassreverse proxypassreversecookiedomain proxypassreversecookiepath proxypreservehost "
+"proxyreceivebuffersize proxyremote proxyremotematch proxyrequests proxyscgiinternalredirect proxyscgisendfile "
+"proxyset proxysourceaddress proxystatus proxytimeout proxyvia qsc qualifyredirecturl readmename "
+"receivebuffersize redirect redirectmatch redirectpermanent redirecttemp refererignore refererlog "
+"reflectorheader remoteipheader remoteipinternalproxy remoteipinternalproxylist remoteipproxiesheader "
+"remoteiptrustedproxy remoteiptrustedproxylist removecharset removeencoding removehandler removeinputfilter "
+"removelanguage removeoutputfilter removetype requestheader requestreadtimeout require requireall "
+"requireany requirenone resourceconfig rewritebase rewritecond rewriteengine rewritelock rewritelog "
+"rewriteloglevel rewritemap rewriteoptions rewriterule rlimitcpu rlimitmem rlimitnproc satisfy "
+"scoreboardfile script scriptalias scriptaliasmatch scriptinterpretersource scriptlog scriptlogbuffer "
+"scriptloglength scriptsock securelisten seerequesttail sendbuffersize serveradmin serveralias serverlimit "
+"servername serverpath serverroot serversignature servertokens servertype session sessioncookiename "
+"sessioncookiename2 sessioncookieremove sessioncryptocipher sessioncryptodriver sessioncryptopassphrase "
+"sessioncryptopassphrasefile sessiondbdcookiename sessiondbdcookiename2 sessiondbdcookieremove "
+"sessiondbddeletelabel sessiondbdinsertlabel sessiondbdperuser sessiondbdselectlabel sessiondbdupdatelabel "
+"sessionenv sessionexclude sessionheader sessioninclude sessionmaxage setenv setenvif setenvifexpr "
+"setenvifnocase sethandler setinputfilter setoutputfilter singlelisten ssiendtag ssierrormsg ssietag "
+"ssilastmodified ssilegacyexprparser ssistarttag ssitimeformat ssiundefinedecho sslcacertificatefile "
+"sslcacertificatepath sslcadnrequestfile sslcadnrequestpath sslcarevocationcheck sslcarevocationfile "
+"sslcarevocationpath sslcertificatechainfile sslcertificatefile sslcertificatekeyfile sslciphersuite "
+"sslcompression sslcryptodevice sslengine sslfips sslhonorcipherorder sslinsecurerenegotiation sslmutex "
+"sslocspdefaultresponder sslocspenable sslocspoverrideresponder sslocspproxyurl sslocsprespondertimeout "
+"sslocspresponsemaxage sslocspresponsetimeskew sslocspuserequestnonce sslopensslconfcmd ssloptions "
+"sslpassphrasedialog sslprotocol sslproxycacertificatefile sslproxycacertificatepath sslproxycarevocationcheck "
+"sslproxycarevocationfile sslproxycarevocationpath sslproxycheckpeercn sslproxycheckpeerexpire "
+"sslproxycheckpeername sslproxyciphersuite sslproxyengine sslproxymachinecertificatechainfile "
+"sslproxymachinecertificatefile sslproxymachinecertificatepath sslproxyprotocol sslproxyverify "
+"sslproxyverifydepth sslrandomseed sslrenegbuffersize sslrequire sslrequiressl sslsessioncache "
+"sslsessioncachetimeout sslsessionticketkeyfile sslsessiontickets sslsrpunknownuserseed "
+"sslsrpverifierfile sslstaplingcache sslstaplingerrorcachetimeout sslstaplingfaketrylater "
+"sslstaplingforceurl sslstaplingrespondertimeout sslstaplingresponsemaxage sslstaplingresponsetimeskew "
+"sslstaplingreturnrespondererrors sslstaplingstandardcachetimeout sslstrictsnivhostcheck sslusername "
+"sslusestapling sslverifyclient sslverifydepth startservers startthreads substitute substituteinheritbefore "
+"substitutemaxlinelength suexec suexecusergroup threadlimit threadsperchild threadstacksize timeout "
+"traceenable transferlog typesconfig undefine undefmacro unsetenv use usecanonicalname usecanonicalphysicalport "
+"user userdir vhostcgimode vhostcgiprivs vhostgroup vhostprivs vhostsecure vhostuser virtualdocumentroot "
+"virtualdocumentrootip virtualhost virtualscriptalias virtualscriptaliasip watchdoginterval win32disableacceptex "
+"xbithack xml2encalias xml2encdefault xml2startparse",
 "", //"on off standalone inetd force-response-1.0 downgrade-1.0 nokeepalive indexes includes followsymlinks none x-compress x-gzip",
 "", "", "", "", "", "", "" };
 
@@ -1120,16 +1182,16 @@ EDITLEXER lexPS = { SCLEX_POWERSHELL, 63021, L"PowerShell Script", L"ps1; psd1; 
 
 KEYWORDLIST KeyWords_NSIS = {
 "!addincludedir !addplugindir !appendfile !cd !define !delfile !echo !else !endif !error "
-"!execute !if !ifdef !ifmacrodef !ifmacrondef !ifndef !include !insertmacro !macro !macroend "
-"!packhdr !searchparse !searchreplace !system !tempfile !undef !verbose !warning .onguiend .onguiinit "
-".oninit .oninstfailed .oninstsuccess .onmouseoversection .onrebootfailed .onselchange .onuserabort "
-".onverifyinstdir un.onguiend un.onguiinit un.oninit un.onrebootfailed un.onuninstfailed un.onuninstsuccess "
+"!execute !finalize !getdllversion !if !ifdef !ifmacrodef !ifmacrondef !ifndef !include !insertmacro !macro "
+"!macroend !macroundef !makensis !packhdr !searchparse !searchreplace !system !tempfile !undef !verbose !warning "
+".onguiend .onguiinit .oninit .oninstfailed .oninstsuccess .onmouseoversection .onrebootfailed .onselchange "
+".onuserabort .onverifyinstdir un.onguiend un.onguiinit un.oninit un.onrebootfailed un.onuninstfailed un.onuninstsuccess "
 "un.onuserabort abort addbrandingimage addsize allowrootdirinstall allowskipfiles autoclosewindow "
 "bannertrimpath bgfont bggradient brandingtext bringtofront call callinstdll caption changeui checkbitmap "
 "clearerrors completedtext componenttext copyfiles crccheck createdirectory createfont createshortcut "
 "delete deleteinisec deleteinistr deleteregkey deleteregvalue detailprint detailsbuttontext dirstate dirtext "
 "dirvar dirverify enablewindow enumregkey enumregvalue exch exec execshell execwait expandenvstrings "
-"file filebufsize fileclose fileerrortext fileopen fileread filereadbyte filereadutf16le filereadword "
+"file filebufsize fileclose fileerrortext fileexists fileopen fileread filereadbyte filereadutf16le filereadword "
 "fileseek filewrite filewritebyte filewriteutf16le filewriteword findclose findfirst findnext findproc "
 "findwindow flushini getcurinsttype getcurrentaddress getdlgitem getdllversion getdllversionlocal "
 "geterrorlevel getfiletime getfiletimelocal getfontname getfontnamelocal getfontversion getfontversionlocal "
@@ -1137,17 +1199,17 @@ KEYWORDLIST KeyWords_NSIS = {
 "ifabort iferrors iffileexists ifrebootflag ifsilent initpluginsdir installbuttontext installcolors installdir "
 "installdirregkey instprogressflags insttype insttypegettext insttypesettext intcmp intcmpu intfmt intop "
 "iswindow langstring licensebkcolor licensedata licenseforceselection licenselangstring licensetext "
-"loadlanguagefile lockwindow logset logtext messagebox miscbuttontext name nop outfile page pagecallbacks pop "
-"push quit readenvstr readinistr readregdword readregstr reboot regdll rename requestexecutionlevel reservefile "
-"return rmdir searchpath sectiongetflags sectiongetinsttypes sectiongetsize sectiongettext sectionin "
+"loadlanguagefile lockwindow logset logtext manifestsupportedos messagebox miscbuttontext name nop outfile page "
+"pagecallbacks pop push quit readenvstr readinistr readregdword readregstr reboot regdll rename requestexecutionlevel "
+"reservefile return rmdir searchpath sectiongetflags sectiongetinsttypes sectiongetsize sectiongettext sectionin "
 "sectionsetflags sectionsetinsttypes sectionsetsize sectionsettext sendmessage setautoclose setbrandingimage "
 "setcompress setcompressionlevel setcompressor setcompressordictsize setctlcolors setcurinsttype "
 "setdatablockoptimize setdatesave setdetailsprint setdetailsview seterrorlevel seterrors setfileattributes "
 "setfont setoutpath setoverwrite setpluginunload setrebootflag setregview setshellvarcontext setsilent "
 "showinstdetails showuninstdetails showwindow silentinstall silentuninstall sleep spacetexts strcmp strcmps "
-"strcpy strlen subcaption uninstallbuttontext uninstallcaption uninstallicon uninstallsubcaption uninstalltext "
-"uninstpage unregdll var viaddversionkey viproductversion windowicon writeinistr writeregbin writeregdword "
-"writeregexpandstr writeregstr writeuninstaller xpstyle",
+"strcpy strlen subcaption unicode uninstallbuttontext uninstallcaption uninstallicon uninstallsubcaption uninstalltext "
+"uninstpage unregdll var viaddversionkey vifileversion viproductversion windowicon writeinistr writeregbin "
+"writeregdword writeregexpandstr writeregstr writeuninstaller xpstyle",
 "${nsisdir} $0 $1 $2 $3 $4 $5 $6 $7 $8 $9 $r0 $r1 $r2 $r3 $r4 $r5 $r6 $r7 $r8 $r9 $instdir $outdir $cmdline "
 "$language $programfiles $programfiles32 $programfiles64 $commonfiles $commonfiles32 $commonfiles64 "
 "$desktop $exedir $exefile $exepath $windir $sysdir $temp $startmenu $smprograms $smstartup $quicklaunch "
@@ -1155,7 +1217,7 @@ KEYWORDLIST KeyWords_NSIS = {
 "$localappdata $printhood $internet_cache $cookies $history $profile $admintools $resources $resources_localized "
 "$cdburn_area $hwndparent $pluginsdir ${__date__} ${__file__} ${__function__} ${__global__} ${__line__} "
 "${__pageex__} ${__section__} ${__time__} ${__timestamp__} ${__uninstall__}",
-"alt colored control cur date end global ignorecase leave shift smooth utcdate sw_hide sw_showmaximized "
+"alt charset colored control cur date end global ignorecase leave shift smooth utcdate sw_hide sw_showmaximized "
 "sw_showminimized sw_shownormal archive auto oname rebootok nonfatal ifempty nounload filesonly short mb_ok "
 "mb_okcancel mb_abortretryignore mb_retrycancel mb_yesno mb_yesnocancel mb_iconexclamation mb_iconinformation "
 "mb_iconquestion mb_iconstop mb_usericon mb_topmost mb_setforeground mb_right mb_rtlreading mb_defbutton1 "
@@ -1168,7 +1230,7 @@ KEYWORDLIST KeyWords_NSIS = {
 "zlib bzip2 lzma try ifnewer ifdiff lastused manual alwaysoff normal file_attribute_normal file_attribute_archive "
 "hidden file_attribute_hidden offline file_attribute_offline readonly file_attribute_readonly system "
 "file_attribute_system temporary file_attribute_temporary custom license components directory instfiles "
-"uninstconfirm 32 64 enablecancel",
+"uninstconfirm 32 64 enablecancel noworkingdir plugin rawnl winvista win7 win8 win8.1 win10",
 "", "", "", "", "", "" };
 
 
@@ -1210,15 +1272,15 @@ KEYWORDLIST KeyWords_INNO = {
 "languagecodepage languageid languagename licensefile lzmaalgorithm lzmablocksize lzmadictionarysize lzmamatchfinder "
 "lzmanumblockthreads lzmanumfastbytes lzmauseseparateprocess mergeduplicatefiles minversion onlybelowversion "
 "outputbasefilename outputdir outputmanifestfile password privilegesrequired reservebytes restartapplications "
-"restartifneededbyrun righttoleft setupiconfile setuplogging showcomponentsizes showlanguagedialog showtaskstreelines "
+"restartifneededbyrun righttoleft setupiconfile setuplogging setupmutex showcomponentsizes showlanguagedialog showtaskstreelines "
 "showundisplayablelanguages signeduninstaller signeduninstallerdir signtool signtoolretrycount slicesperdisk solidcompression "
 "sourcedir strongassemblyname timestamprounding timestampsinutc titlefontname titlefontsize touchdate touchtime uninstallable "
 "uninstalldisplayicon uninstalldisplayname uninstallfilesdir uninstalldisplaysize uninstalllogmode uninstallrestartcomputer "
 "updateuninstalllogappname usepreviousappdir usepreviousgroup usepreviouslanguage useprevioussetuptype useprevioustasks "
 "verb versioninfoproductname useprevioususerinfo userinfopage usesetupldr versioninfocompany versioninfocopyright "
 "versioninfodescription versioninfoproductversion versioninfotextversion versioninfoversion versioninfoproducttextversion "
-"welcomefontname welcomefontsize windowshowcaption windowstartmaximized windowresizable windowvisible wizardimagebackcolor "
-"wizardimagefile wizardimagestretch wizardsmallimagefile",
+"welcomefontname welcomefontsize windowshowcaption windowstartmaximized windowresizable windowvisible wizardimagealphaformat "
+"wizardimagebackcolor wizardimagefile wizardimagestretch wizardsmallimagefile",
 "appusermodelid afterinstall attribs beforeinstall check comment components copymode description destdir destname excludes "
 "extradiskspacerequired filename flags fontinstall groupdescription hotkey infoafterfile infobeforefile iconfilename "
 "iconindex key languages licensefile messagesfile minversion name onlybelowversion parameters permissions root runonceid "
@@ -2080,139 +2142,6 @@ EDITLEXER lexANSI = { SCLEX_NULL, 63258, L"ANSI Art", L"nfo; diz", L"", &KeyWord
                       { STYLE_BRACEBAD, 63103, L"Matching Braces Error", L"size:+0", L"" },
                       { -1, 00000, L"", L"", L"" } } };
 
-
-KEYWORDLIST KeyWords_AHK = {
-"break continue else exit exitapp gosub goto if ifequal ifexist ifgreater ifgreaterorequal "
-"ifinstring ifless iflessorequal ifmsgbox ifnotequal ifnotexist ifnotinstring ifwinactive "
-"ifwinexist ifwinnotactive ifwinnotexist loop onexit pause repeat return settimer sleep "
-"suspend static global local var byref while until for class try catch throw",
-"autotrim blockinput clipwait control controlclick controlfocus controlget controlgetfocus "
-"controlgetpos controlgettext controlmove controlsend controlsendraw controlsettext coordmode "
-"critical detecthiddentext detecthiddenwindows drive driveget drivespacefree edit endrepeat "
-"envadd envdiv envget envmult envset envsub envupdate fileappend filecopy filecopydir filecreatedir "
-"filecreateshortcut filedelete filegetattrib filegetshortcut filegetsize filegettime filegetversion "
-"fileinstall filemove filemovedir fileread filereadline filerecycle filerecycleempty fileremovedir "
-"fileselectfile fileselectfolder filesetattrib filesettime formattime getkeystate groupactivate "
-"groupadd groupclose groupdeactivategui guicontrol guicontrolget hideautoitwin hotkey imagesearch "
-"inidelete iniread iniwrite input inputbox keyhistory keywait listhotkeys listlines listvars menu "
-"mouseclick mouseclickdrag mousegetpos mousemove msgbox outputdebug pixelgetcolor pixelsearch "
-"postmessage process progress random regdelete regread regwrite reload run runas runwait send "
-"sendevent sendinput sendmessage sendmode sendplay sendraw setbatchlines setcapslockstate "
-"setcontroldelay setdefaultmousespeed setenv setformat setkeydelay setmousedelay setnumlockstate "
-"setscrolllockstate setstorecapslockmode settitlematchmode setwindelay setworkingdir shutdown sort "
-"soundbeep soundget soundgetwavevolume soundplay soundset soundsetwavevolume splashimage splashtextoff "
-"splashtexton splitpath statusbargettext statusbarwait stringcasesense stringgetpos stringleft stringlen "
-"stringlower stringmid stringreplace stringright stringsplit stringtrimleft stringtrimright stringupper "
-"sysget thread tooltip transform traytip urldownloadtofile winactivate winactivatebottom winclose winget "
-"wingetactivestats wingetactivetitle wingetclass wingetpos wingettext wingettitle winhide winkill "
-"winmaximize winmenuselectitem winminimize winminimizeall winminimizeallundo winmove winrestore winset "
-"winsettitle winshow winwait winwaitactive winwaitclose winwaitnotactive fileencoding",
-"abs acos asc asin atan ceil chr cos dllcall exp fileexist floor getkeystate numget numput "
-"registercallback il_add il_create il_destroy instr islabel isfunc ln log lv_add lv_delete "
-"lv_deletecol lv_getcount lv_getnext lv_gettext lv_insert lv_insertcol lv_modify lv_modifycol "
-"lv_setimagelist mod onmessage round regexmatch regexreplace sb_seticon sb_setparts sb_settext "
-"sin sqrt strlen substr tan tv_add tv_delete tv_getchild tv_getcount tv_getnext tv_get tv_getparent "
-"tv_getprev tv_getselection tv_gettext tv_modify tv_setimagelist varsetcapacity winactive winexist "
-"trim ltrim rtrim fileopen strget strput object array isobject objinsert objremove objminindex "
-"objmaxindex objsetcapacity objgetcapacity objgetaddress objnewenum objaddref objrelease objhaskey "
-"objclone _insert _remove _minindex _maxindex _setcapacity _getcapacity _getaddress _newenum _addref "
-"_release _haskey _clone comobjcreate comobjget comobjconnect comobjerror comobjactive comobjenwrap "
-"comobjunwrap comobjparameter comobjmissing comobjtype comobjvalue comobjarray comobjquery comobjflags "
-"func getkeyname getkeyvk getkeysc isbyref exception",
-"allowsamelinecomments clipboardtimeout commentflag errorstdout escapechar hotkeyinterval "
-"hotkeymodifiertimeout hotstring if iftimeout ifwinactive ifwinexist include includeagain "
-"installkeybdhook installmousehook keyhistory ltrim maxhotkeysperinterval maxmem maxthreads "
-"maxthreadsbuffer maxthreadsperhotkey menumaskkey noenv notrayicon persistent singleinstance "
-"usehook warn winactivateforce",
-"shift lshift rshift alt lalt ralt control lcontrol rcontrol ctrl lctrl rctrl lwin rwin appskey "
-"altdown altup shiftdown shiftup ctrldown ctrlup lwindown lwinup rwindown rwinup lbutton rbutton "
-"mbutton wheelup wheeldown xbutton1 xbutton2 joy1 joy2 joy3 joy4 joy5 joy6 joy7 joy8 joy9 joy10 "
-"joy11 joy12 joy13 joy14 joy15 joy16 joy17 joy18 joy19 joy20 joy21 joy22 joy23 joy24 joy25 joy26 "
-"joy27 joy28 joy29 joy30 joy31 joy32 joyx joyy joyz joyr joyu joyv joypov joyname joybuttons "
-"joyaxes joyinfo space tab enter escape esc backspace bs delete del insert ins pgup pgdn home end "
-"up down left right printscreen ctrlbreak pause scrolllock capslock numlock numpad0 numpad1 numpad2 "
-"numpad3 numpad4 numpad5 numpad6 numpad7 numpad8 numpad9 numpadmult numpadadd numpadsub numpaddiv "
-"numpaddot numpaddel numpadins numpadclear numpadup numpaddown numpadleft numpadright numpadhome "
-"numpadend numpadpgup numpadpgdn numpadenter f1 f2 f3 f4 f5 f6 f7 f8 f9 f10 f11 f12 f13 f14 f15 "
-"f16 f17 f18 f19 f20 f21 f22 f23 f24 browser_back browser_forward browser_refresh browser_stop "
-"browser_search browser_favorites browser_home volume_mute volume_down volume_up media_next "
-"media_prev media_stop media_play_pause launch_mail launch_media launch_app1 launch_app2 blind "
-"click raw wheelleft wheelright",
-"a_ahkpath a_ahkversion a_appdata a_appdatacommon a_autotrim a_batchlines a_caretx a_carety "
-"a_computername a_controldelay a_cursor a_dd a_ddd a_dddd a_defaultmousespeed a_desktop "
-"a_desktopcommon a_detecthiddentext a_detecthiddenwindows a_endchar a_eventinfo a_exitreason "
-"a_formatfloat a_formatinteger a_gui a_guievent a_guicontrol a_guicontrolevent a_guiheight "
-"a_guiwidth a_guix a_guiy a_hour a_iconfile a_iconhidden a_iconnumber a_icontip a_index "
-"a_ipaddress1 a_ipaddress2 a_ipaddress3 a_ipaddress4 a_isadmin a_iscompiled a_issuspended "
-"a_keydelay a_language a_lasterror a_linefile a_linenumber a_loopfield a_loopfileattrib "
-"a_loopfiledir a_loopfileext a_loopfilefullpath a_loopfilelongpath a_loopfilename "
-"a_loopfileshortname a_loopfileshortpath a_loopfilesize a_loopfilesizekb a_loopfilesizemb "
-"a_loopfiletimeaccessed a_loopfiletimecreated a_loopfiletimemodified a_loopreadline a_loopregkey "
-"a_loopregname a_loopregsubkey a_loopregtimemodified a_loopregtype a_mday a_min a_mm a_mmm "
-"a_mmmm a_mon a_mousedelay a_msec a_mydocuments a_now a_nowutc a_numbatchlines a_ostype "
-"a_osversion a_priorhotkey a_programfiles a_programs a_programscommon a_screenheight "
-"a_screenwidth a_scriptdir a_scriptfullpath a_scriptname a_sec a_space a_startmenu "
-"a_startmenucommon a_startup a_startupcommon a_stringcasesense a_tab a_temp a_thishotkey "
-"a_thismenu a_thismenuitem a_thismenuitempos a_tickcount a_timeidle a_timeidlephysical "
-"a_timesincepriorhotkey a_timesincethishotkey a_titlematchmode a_titlematchmodespeed "
-"a_username a_wday a_windelay a_windir a_workingdir a_yday a_year a_yweek a_yyyy "
-"clipboard clipboardall comspec errorlevel programfiles true false a_thisfunc a_thislabel "
-"a_ispaused a_iscritical a_isunicode a_ptrsize a_scripthwnd a_priorkey",
-"ltrim rtrim join ahk_id ahk_pid ahk_class ahk_group ahk_exe processname processpath minmax "
-"controllist statuscd filesystem setlabel alwaysontop mainwindow nomainwindow useerrorlevel "
-"altsubmit hscroll vscroll imagelist wantctrla wantf2 vis visfirst wantreturn backgroundtrans "
-"minimizebox maximizebox sysmenu toolwindow exstyle check3 checkedgray readonly notab lastfound "
-"lastfoundexist alttab shiftalttab alttabmenu alttabandmenu alttabmenudismiss controllisthwnd "
-"hwnd deref pow bitnot bitand bitor bitxor bitshiftleft bitshiftright sendandmouse mousemove "
-"mousemoveoff hkey_local_machine hkey_users hkey_current_user hkey_classes_root hkey_current_config "
-"hklm hku hkcu hkcr hkcc reg_sz reg_expand_sz reg_multi_sz reg_dword reg_qword reg_binary reg_link "
-"reg_resource_list reg_full_resource_descriptor reg_resource_requirements_list reg_dword_big_endian "
-"regex pixel mouse screen relative rgb low belownormal normal abovenormal high realtime between "
-"contains in is integer float number digit xdigit integerfast floatfast alpha upper lower alnum "
-"time date not or and topmost top bottom transparent transcolor redraw region id idlast count "
-"list capacity eject lock unlock label serial type status seconds minutes hours days read parse "
-"logoff close error single shutdown menu exit reload tray add rename check uncheck togglecheck "
-"enable disable toggleenable default nodefault standard nostandard color delete deleteall icon "
-"noicon tip click show edit progress hotkey text picture pic groupbox button checkbox radio "
-"dropdownlist ddl combobox statusbar treeview listbox listview datetime monthcal updown slider "
-"tab tab2 activex iconsmall tile report sortdesc nosort nosorthdr grid hdr autosize range xm ym "
-"ys xs xp yp font resize owner submit nohide minimize maximize restore noactivate na cancel "
-"destroy center margin owndialogs guiescape guiclose guisize guicontextmenu guidropfiles tabstop "
-"section wrap border top bottom buttons expand first lines number uppercase lowercase limit "
-"password multi group background bold italic strike underline norm theme caption delimiter flash "
-"style checked password hidden left right center section move focus hide choose choosestring text "
-"pos enabled disabled visible notimers interrupt priority waitclose unicode tocodepage fromcodepage "
-"yes no ok cancel abort retry ignore force on off all send wanttab monitorcount monitorprimary "
-"monitorname monitorworkarea pid this base extends __get __set __call __delete __new new "
-"useunsetlocal useunsetglobal useenv localsameasglobal",
-"", "" };
-
-
-EDITLEXER lexAHK = { SCLEX_AHK, 63305, L"AutoHotkey Script", L"ahk; ia; scriptlet", L"", &KeyWords_AHK, {
-                     { STYLE_DEFAULT, 63126, L"Default", L"", L"" },
-                     //{ SCE_AHK_DEFAULT, L"Default", L"", L"" },
-                     { MULTI_STYLE(SCE_AHK_COMMENTLINE,SCE_AHK_COMMENTBLOCK,0,0), 63127, L"Comment", L"fore:#008000", L"" },
-                     { SCE_AHK_ESCAPE, 63306, L"Escape", L"fore:#FF8000", L"" },
-                     { SCE_AHK_SYNOPERATOR, 63307, L"Syntax Operator", L"fore:#7F200F", L"" },
-                     { SCE_AHK_EXPOPERATOR, 63308, L"Expression operator", L"fore:#FF4F00", L"" },
-                     { SCE_AHK_STRING, 63131, L"String", L"fore:#404040", L"" },
-                     { SCE_AHK_NUMBER, 63130, L"Number", L"fore:#2F4F7F", L"" },
-                     { SCE_AHK_IDENTIFIER, 63129, L"Identifier", L"fore:#CF2F0F", L"" },
-                     { SCE_AHK_VARREF, 63309, L"Variable dereferencing", L"fore:#CF2F0F; back:#E4FFE4", L"" },
-                     { SCE_AHK_LABEL, 63235, L"Label", L"fore:#000000; back:#FFFFA1", L"" },
-                     { SCE_AHK_WORD_CF, 63310, L"Flow of control", L"fore:#480048; bold", L"" },
-                     { SCE_AHK_WORD_CMD, 63236, L"Command", L"fore:#004080", L"" },
-                     { SCE_AHK_WORD_FN, 63277, L"Function", L"fore:#0F707F; italics", L"" },
-                     { SCE_AHK_WORD_DIR, 63203, L"Directive", L"fore:#F04020; italics", L"" },
-                     { SCE_AHK_WORD_KB, 63311, L"Keys & buttons", L"fore:#FF00FF; bold", L"" },
-                     { SCE_AHK_WORD_VAR, 63312, L"Built-in Variables", L"fore:#CF00CF; italics", L"" },
-                     { SCE_AHK_WORD_SP, 63280, L"Special", L"fore:#0000FF; italics", L"" },
-                     //{ SCE_AHK_WORD_UD, 63106, L"User Defined", L"fore:#800020", L"" },
-                     { SCE_AHK_VARREFKW, 63313, L"Variable keyword", L"fore:#CF00CF; italics; back:#F9F9FF", L"" },
-                     { SCE_AHK_ERROR, 63260, L"Error", L"back:#FFC0C0", L"" },
-                     { -1, 00000, L"", L"", L"" } } };
-
-
 KEYWORDLIST KeyWords_CMAKE = {
 "add_custom_command add_custom_target add_definitions add_dependencies add_executable add_library "
 "add_subdirectory add_test aux_source_directory build_command build_name cmake_minimum_required "
@@ -2430,6 +2359,26 @@ EDITLEXER lexVHDL = { SCLEX_VHDL, 63370, L"VHDL", L"vhdl; vhd", L"", &KeyWords_V
                        { -1, 00000, L"", L"", L"" } } };
 
 
+KEYWORDLIST KeyWords_Registry = {
+"", "", "", "", "", "", "", "", "" };
+
+EDITLEXER lexRegistry = { SCLEX_REGISTRY, 63370, L"Windows Registry Files", L"reg", L"", &KeyWords_Registry, {
+                       { STYLE_DEFAULT, 63126, L"Default", L"", L"" },
+                       //{ SCE_REG_DEFAULT, 63126, L"Default", L"", L"" },
+                       { SCE_REG_COMMENT, 63127, L"Comment", L"fore:#008800", L"" },
+                       { SCE_REG_VALUENAME, 63376, L"Value Name", L"", L"" },
+                       { MULTI_STYLE(SCE_REG_STRING,SCE_REG_STRING_GUID,0,0), 63131, L"String", L"fore:#008000", L"" },
+                       { SCE_REG_VALUETYPE, 63377, L"Value Type", L"bold; fore:#00007F", L"" },
+                       { SCE_REG_HEXDIGIT, 63378, L"Hex", L"fore:#7F0B0C", L"" },
+                       { SCE_REG_ADDEDKEY, 63379, L"Added Key", L"fore:#000000; back:#FF8040; bold; eolfilled", L"" }, //fore:#530155
+                       { SCE_REG_DELETEDKEY, 63380, L"Deleted Key", L"fore:#FF0000", L"" },
+                       { SCE_REG_ESCAPED, 63381, L"Escaped", L"bold; fore:#7D8187", L"" },
+                       { SCE_REG_KEYPATH_GUID, 63382, L"GUID in Key Path", L"fore:#7B5F15", L"" },
+                       { SCE_REG_PARAMETER, 63294, L"Parameter", L"fore:#0B6561", L"" },
+                       { SCE_REG_OPERATOR, 63132, L"Operator", L"bold", L"" },
+                       { -1, 00000, L"", L"", L"" } } };
+
+
 KEYWORDLIST KeyWords_COFFEESCRIPT = {
 "", "", "", "", "", "", "", "", "" };
 
@@ -2477,16 +2426,15 @@ EDITLEXER lexMATLAB = { SCLEX_MATLAB, 63360, L"MATLAB", L"matlab", L"", &KeyWord
 // in Notepad2.c ParseCommandLine() if you change this array!
 PEDITLEXER pLexArray[NUMLEXERS] =
 {
-  &lexDefault,
+  &lexNULL,
   &lexANSI,
   &lexAVS,
-  &lexCOFFEESCRIPT,
   &lexCONF, //Apache Config Scripts
   &lexASM,
-  &lexAHK,
   &lexAU3,
   &lexBAT,
-  &lexINI,
+  &lexCOFFEESCRIPT,
+  &lexPROPS,
   &lexCPP,
   &lexCS,
   &lexCmake,
@@ -2506,6 +2454,7 @@ PEDITLEXER pLexArray[NUMLEXERS] =
   &lexPS,
   &lexPY,
   &lexRC,
+  &lexRegistry,
   &lexRUBY,
   &lexBASH,
   &lexSQL,
@@ -2520,7 +2469,7 @@ PEDITLEXER pLexArray[NUMLEXERS] =
 
 
 // Currently used lexer
-PEDITLEXER pLexCurrent = &lexDefault;
+PEDITLEXER pLexCurrent = &lexNULL;
 COLORREF crCustom[16];
 BOOL bUse2ndDefaultStyle;
 BOOL fStylesModified = FALSE;
@@ -2834,7 +2783,7 @@ void Style_SetLexer(HWND hwnd,PEDITLEXER pLexNew)
   iIdx = (bUse2ndDefaultStyle) ? 12 : 0;
 
   // Font quality setup, check availability of Consolas
-  Style_SetFontQuality(hwnd,lexDefault.Styles[0+iIdx].szValue);
+  Style_SetFontQuality(hwnd,lexNULL.Styles[0+iIdx].szValue);
   fIsConsolasAvailable = IsFontAvailable(L"Consolas");
 
   // Clear
@@ -2844,30 +2793,30 @@ void Style_SetLexer(HWND hwnd,PEDITLEXER pLexNew)
   SendMessage(hwnd,SCI_STYLERESETDEFAULT,0,0);
   SendMessage(hwnd,SCI_STYLESETCHARACTERSET,STYLE_DEFAULT,(LPARAM)DEFAULT_CHARSET);
   iBaseFontSize = 10;
-  Style_SetStyles(hwnd,lexDefault.Styles[0+iIdx].iStyle,lexDefault.Styles[0+iIdx].szValue);  // default
-  Style_StrGetSize(lexDefault.Styles[0+iIdx].szValue,&iBaseFontSize);                        // base size
+  Style_SetStyles(hwnd,lexNULL.Styles[0+iIdx].iStyle,lexNULL.Styles[0+iIdx].szValue);  // default
+  Style_StrGetSize(lexNULL.Styles[0+iIdx].szValue,&iBaseFontSize);                        // base size
 
   // Auto-select codepage according to charset
   //Style_SetACPfromCharSet(hwnd);
 
-  if (!Style_StrGetColor(TRUE,lexDefault.Styles[0+iIdx].szValue,&iValue))
+  if (!Style_StrGetColor(TRUE,lexNULL.Styles[0+iIdx].szValue,&iValue))
     SendMessage(hwnd,SCI_STYLESETFORE,STYLE_DEFAULT,(LPARAM)GetSysColor(COLOR_WINDOWTEXT));   // default text color
-  if (!Style_StrGetColor(FALSE,lexDefault.Styles[0+iIdx].szValue,&iValue))
+  if (!Style_StrGetColor(FALSE,lexNULL.Styles[0+iIdx].szValue,&iValue))
     SendMessage(hwnd,SCI_STYLESETBACK,STYLE_DEFAULT,(LPARAM)GetSysColor(COLOR_WINDOW));       // default window color
 
   if (pLexNew->iLexer != SCLEX_NULL || pLexNew == &lexANSI)
     Style_SetStyles(hwnd,pLexNew->Styles[0].iStyle,pLexNew->Styles[0].szValue); // lexer default
   SendMessage(hwnd,SCI_STYLECLEARALL,0,0);
 
-  Style_SetStyles(hwnd,lexDefault.Styles[1+iIdx].iStyle,lexDefault.Styles[1+iIdx].szValue); // linenumber
-  Style_SetStyles(hwnd,lexDefault.Styles[2+iIdx].iStyle,lexDefault.Styles[2+iIdx].szValue); // brace light
-  Style_SetStyles(hwnd,lexDefault.Styles[3+iIdx].iStyle,lexDefault.Styles[3+iIdx].szValue); // brace bad
+  Style_SetStyles(hwnd,lexNULL.Styles[1+iIdx].iStyle,lexNULL.Styles[1+iIdx].szValue); // linenumber
+  Style_SetStyles(hwnd,lexNULL.Styles[2+iIdx].iStyle,lexNULL.Styles[2+iIdx].szValue); // brace light
+  Style_SetStyles(hwnd,lexNULL.Styles[3+iIdx].iStyle,lexNULL.Styles[3+iIdx].szValue); // brace bad
   if (pLexNew != &lexANSI)
-    Style_SetStyles(hwnd,lexDefault.Styles[4+iIdx].iStyle,lexDefault.Styles[4+iIdx].szValue); // control char
-  Style_SetStyles(hwnd,lexDefault.Styles[5+iIdx].iStyle,lexDefault.Styles[5+iIdx].szValue); // indent guide
+    Style_SetStyles(hwnd,lexNULL.Styles[4+iIdx].iStyle,lexNULL.Styles[4+iIdx].szValue); // control char
+  Style_SetStyles(hwnd,lexNULL.Styles[5+iIdx].iStyle,lexNULL.Styles[5+iIdx].szValue); // indent guide
 
   // More default values...
-  if (Style_StrGetColor(TRUE,lexDefault.Styles[6+iIdx].szValue,&rgb)) { // selection fore
+  if (Style_StrGetColor(TRUE,lexNULL.Styles[6+iIdx].szValue,&rgb)) { // selection fore
     SendMessage(hwnd,SCI_SETSELFORE,TRUE,rgb);
     SendMessage(hwnd,SCI_SETADDITIONALSELFORE,rgb,0);
   }
@@ -2876,7 +2825,7 @@ void Style_SetLexer(HWND hwnd,PEDITLEXER pLexNew)
     SendMessage(hwnd,SCI_SETADDITIONALSELFORE,0,0);
   }
 
-  if (Style_StrGetColor(FALSE,lexDefault.Styles[6+iIdx].szValue,&iValue)) { // selection back
+  if (Style_StrGetColor(FALSE,lexNULL.Styles[6+iIdx].szValue,&iValue)) { // selection back
     SendMessage(hwnd,SCI_SETSELBACK,TRUE,iValue);
     SendMessage(hwnd,SCI_SETADDITIONALSELBACK,iValue,0);
   }
@@ -2885,7 +2834,7 @@ void Style_SetLexer(HWND hwnd,PEDITLEXER pLexNew)
     SendMessage(hwnd,SCI_SETADDITIONALSELBACK,RGB(0xC0,0xC0,0xC0),0);
   }
 
-  if (Style_StrGetAlpha(lexDefault.Styles[6+iIdx].szValue,&iValue)) { // selection alpha
+  if (Style_StrGetAlpha(lexNULL.Styles[6+iIdx].szValue,&iValue)) { // selection alpha
     SendMessage(hwnd,SCI_SETSELALPHA,iValue,0);
     SendMessage(hwnd,SCI_SETADDITIONALSELALPHA,iValue,0);
   }
@@ -2894,38 +2843,38 @@ void Style_SetLexer(HWND hwnd,PEDITLEXER pLexNew)
     SendMessage(hwnd,SCI_SETADDITIONALSELALPHA,SC_ALPHA_NOALPHA,0);
   }
 
-  if (StrStrI(lexDefault.Styles[6+iIdx].szValue,L"eolfilled")) // selection eolfilled
+  if (StrStrI(lexNULL.Styles[6+iIdx].szValue,L"eolfilled")) // selection eolfilled
     SendMessage(hwnd,SCI_SETSELEOLFILLED,1,0);
   else
     SendMessage(hwnd,SCI_SETSELEOLFILLED,0,0);
 
-  if (Style_StrGetColor(TRUE,lexDefault.Styles[7+iIdx].szValue,&rgb)) // whitespace fore
+  if (Style_StrGetColor(TRUE,lexNULL.Styles[7+iIdx].szValue,&rgb)) // whitespace fore
     SendMessage(hwnd,SCI_SETWHITESPACEFORE,TRUE,rgb);
   else
     SendMessage(hwnd,SCI_SETWHITESPACEFORE,0,0);
 
-  if (Style_StrGetColor(FALSE,lexDefault.Styles[7+iIdx].szValue,&rgb)) // whitespace back
+  if (Style_StrGetColor(FALSE,lexNULL.Styles[7+iIdx].szValue,&rgb)) // whitespace back
     SendMessage(hwnd,SCI_SETWHITESPACEBACK,TRUE,rgb);
   else
     SendMessage(hwnd,SCI_SETWHITESPACEBACK,0,0);    // use a default value...
 
   // whitespace dot size
   iValue = 1;
-  if (Style_StrGetSize(lexDefault.Styles[7+iIdx].szValue,&iValue)) {
+  if (Style_StrGetSize(lexNULL.Styles[7+iIdx].szValue,&iValue)) {
 
     WCHAR tch[32];
-    WCHAR wchStyle[COUNTOF(lexDefault.Styles[0].szValue)];
-    lstrcpyn(wchStyle,lexDefault.Styles[7+iIdx].szValue,COUNTOF(lexDefault.Styles[0].szValue));
+    WCHAR wchStyle[COUNTOF(lexNULL.Styles[0].szValue)];
+    lstrcpyn(wchStyle,lexNULL.Styles[7+iIdx].szValue,COUNTOF(lexNULL.Styles[0].szValue));
 
     iValue = max(min(iValue,5),0);
-    wsprintf(lexDefault.Styles[7+iIdx].szValue,L"size:%i",iValue);
+    wsprintf(lexNULL.Styles[7+iIdx].szValue,L"size:%i",iValue);
 
     if (Style_StrGetColor(TRUE,wchStyle,&rgb)) {
       wsprintf(tch,L"; fore:#%02X%02X%02X",
         (int)GetRValue(rgb),
         (int)GetGValue(rgb),
         (int)GetBValue(rgb));
-      lstrcat(lexDefault.Styles[7+iIdx].szValue,tch);
+      lstrcat(lexNULL.Styles[7+iIdx].szValue,tch);
     }
 
     if (Style_StrGetColor(FALSE,wchStyle,&rgb)) {
@@ -2933,19 +2882,19 @@ void Style_SetLexer(HWND hwnd,PEDITLEXER pLexNew)
         (int)GetRValue(rgb),
         (int)GetGValue(rgb),
         (int)GetBValue(rgb));
-      lstrcat(lexDefault.Styles[7+iIdx].szValue,tch);
+      lstrcat(lexNULL.Styles[7+iIdx].szValue,tch);
     }
   }
   SendMessage(hwnd,SCI_SETWHITESPACESIZE,iValue,0);
 
   if (bHiliteCurrentLine) {
 
-    if (Style_StrGetColor(FALSE,lexDefault.Styles[8+iIdx].szValue,&rgb)) // caret line back
+    if (Style_StrGetColor(FALSE,lexNULL.Styles[8+iIdx].szValue,&rgb)) // caret line back
     {
       SendMessage(hwnd,SCI_SETCARETLINEVISIBLE,TRUE,0);
       SendMessage(hwnd,SCI_SETCARETLINEBACK,rgb,0);
 
-      if (Style_StrGetAlpha(lexDefault.Styles[8+iIdx].szValue,&iValue))
+      if (Style_StrGetAlpha(lexNULL.Styles[8+iIdx].szValue,&iValue))
         SendMessage(hwnd,SCI_SETCARETLINEBACKALPHA,iValue,0);
       else
         SendMessage(hwnd,SCI_SETCARETLINEBACKALPHA,SC_ALPHA_NOALPHA,0);
@@ -2957,14 +2906,14 @@ void Style_SetLexer(HWND hwnd,PEDITLEXER pLexNew)
     SendMessage(hwnd,SCI_SETCARETLINEVISIBLE,FALSE,0);
 
   // caret style and width
-  if (StrStr(lexDefault.Styles[9+iIdx].szValue,L"block")) {
+  if (StrStr(lexNULL.Styles[9+iIdx].szValue,L"block")) {
     SendMessage(hwnd,SCI_SETCARETSTYLE,CARETSTYLE_BLOCK,0);
     lstrcpy(wchCaretStyle,L"block");
   }
   else {
     WCHAR wch[32];
     iValue = 1;
-    if (Style_StrGetSize(lexDefault.Styles[9+iIdx].szValue,&iValue)) {
+    if (Style_StrGetSize(lexNULL.Styles[9+iIdx].szValue,&iValue)) {
       iValue = max(min(iValue,3),1);
       wsprintf(wch,L"size:%i",iValue);
       lstrcat(wchCaretStyle,wch);
@@ -2972,7 +2921,7 @@ void Style_SetLexer(HWND hwnd,PEDITLEXER pLexNew)
     SendMessage(hwnd,SCI_SETCARETSTYLE,CARETSTYLE_LINE,0);
     SendMessage(hwnd,SCI_SETCARETWIDTH,iValue,0);
   }
-  if (StrStr(lexDefault.Styles[9+iIdx].szValue,L"noblink")) {
+  if (StrStr(lexNULL.Styles[9+iIdx].szValue,L"noblink")) {
     SendMessage(hwnd,SCI_SETCARETPERIOD,(WPARAM)0,0);
     if (lstrlen(wchCaretStyle))
       lstrcat(wchCaretStyle,L"; ");
@@ -2982,7 +2931,7 @@ void Style_SetLexer(HWND hwnd,PEDITLEXER pLexNew)
     SendMessage(hwnd,SCI_SETCARETPERIOD,(WPARAM)GetCaretBlinkTime(),0);
 
   // caret fore
-  if (!Style_StrGetColor(TRUE,lexDefault.Styles[9+iIdx].szValue,&rgb))
+  if (!Style_StrGetColor(TRUE,lexNULL.Styles[9+iIdx].szValue,&rgb))
     rgb = GetSysColor(COLOR_WINDOWTEXT);
   else {
     WCHAR wch[32];
@@ -2998,27 +2947,27 @@ void Style_SetLexer(HWND hwnd,PEDITLEXER pLexNew)
     rgb = (int)SendMessage(hwnd,SCI_STYLEGETFORE,0,0);
   SendMessage(hwnd,SCI_SETCARETFORE,rgb,0);
   SendMessage(hwnd,SCI_SETADDITIONALCARETFORE,rgb,0);
-  lstrcpy(lexDefault.Styles[9+iIdx].szValue,wchCaretStyle);
+  lstrcpy(lexNULL.Styles[9+iIdx].szValue,wchCaretStyle);
 
   if (SendMessage(hwnd,SCI_GETEDGEMODE,0,0) == EDGE_LINE) {
-    if (Style_StrGetColor(TRUE,lexDefault.Styles[10+iIdx].szValue,&rgb)) // edge fore
+    if (Style_StrGetColor(TRUE,lexNULL.Styles[10+iIdx].szValue,&rgb)) // edge fore
       SendMessage(hwnd,SCI_SETEDGECOLOUR,rgb,0);
     else
       SendMessage(hwnd,SCI_SETEDGECOLOUR,GetSysColor(COLOR_3DLIGHT),0);
   }
   else {
-    if (Style_StrGetColor(FALSE,lexDefault.Styles[10+iIdx].szValue,&rgb)) // edge back
+    if (Style_StrGetColor(FALSE,lexNULL.Styles[10+iIdx].szValue,&rgb)) // edge back
       SendMessage(hwnd,SCI_SETEDGECOLOUR,rgb,0);
     else
       SendMessage(hwnd,SCI_SETEDGECOLOUR,GetSysColor(COLOR_3DLIGHT),0);
   }
 
   // Extra Line Spacing
-  if (Style_StrGetSize(lexDefault.Styles[11+iIdx].szValue,&iValue) && pLexNew != &lexANSI) {
+  if (Style_StrGetSize(lexNULL.Styles[11+iIdx].szValue,&iValue) && pLexNew != &lexANSI) {
     int iAscent = 0;
     int iDescent = 0;
     iValue = min(max(iValue,0),64);
-    wsprintf(lexDefault.Styles[11+iIdx].szValue,L"size:%i",iValue);
+    wsprintf(lexNULL.Styles[11+iIdx].szValue,L"size:%i",iValue);
     if (iValue % 2) {
       iAscent++;
       iValue--;
@@ -3031,7 +2980,7 @@ void Style_SetLexer(HWND hwnd,PEDITLEXER pLexNew)
   else {
     SendMessage(hwnd,SCI_SETEXTRAASCENT,0,0);
     SendMessage(hwnd,SCI_SETEXTRADESCENT,0,0);
-    //wsprintf(lexDefault.Styles[11+iIdx].szValue,L"size:0");
+    //wsprintf(lexNULL.Styles[11+iIdx].szValue,L"size:0");
   }
 
   { // set folding style; braces are for scoping only
@@ -3188,13 +3137,13 @@ void Style_SetLongLineColors(HWND hwnd)
   int iIdx = (bUse2ndDefaultStyle) ? 12 : 0;
 
   if (SendMessage(hwnd,SCI_GETEDGEMODE,0,0) == EDGE_LINE) {
-    if (Style_StrGetColor(TRUE,lexDefault.Styles[10+iIdx].szValue,&rgb)) // edge fore
+    if (Style_StrGetColor(TRUE,lexNULL.Styles[10+iIdx].szValue,&rgb)) // edge fore
       SendMessage(hwnd,SCI_SETEDGECOLOUR,rgb,0);
     else
       SendMessage(hwnd,SCI_SETEDGECOLOUR,GetSysColor(COLOR_3DLIGHT),0);
   }
   else {
-    if (Style_StrGetColor(FALSE,lexDefault.Styles[10+iIdx].szValue,&rgb)) // edge back
+    if (Style_StrGetColor(FALSE,lexNULL.Styles[10+iIdx].szValue,&rgb)) // edge back
       SendMessage(hwnd,SCI_SETEDGECOLOUR,rgb,0);
     else
       SendMessage(hwnd,SCI_SETEDGECOLOUR,GetSysColor(COLOR_3DLIGHT),0);
@@ -3215,12 +3164,12 @@ void Style_SetCurrentLineBackground(HWND hwnd)
 
   if (bHiliteCurrentLine) {
 
-    if (Style_StrGetColor(FALSE,lexDefault.Styles[8+iIdx].szValue,&rgb)) // caret line back
+    if (Style_StrGetColor(FALSE,lexNULL.Styles[8+iIdx].szValue,&rgb)) // caret line back
     {
       SendMessage(hwnd,SCI_SETCARETLINEVISIBLE,TRUE,0);
       SendMessage(hwnd,SCI_SETCARETLINEBACK,rgb,0);
 
-      if (Style_StrGetAlpha(lexDefault.Styles[8+iIdx].szValue,&iValue))
+      if (Style_StrGetAlpha(lexNULL.Styles[8+iIdx].szValue,&iValue))
         SendMessage(hwnd,SCI_SETCARETLINEBACKALPHA,iValue,0);
       else
         SendMessage(hwnd,SCI_SETCARETLINEBACKALPHA,SC_ALPHA_NOALPHA,0);
@@ -3347,7 +3296,7 @@ void Style_SetLexerFromFile(HWND hwnd,LPCWSTR lpszFile)
       SendMessage(hwnd,SCI_GETTEXT,(WPARAM)COUNTOF(tchText)-1,(LPARAM)tchText);
       StrTrimA(tchText," \t\n\r");
       if (pLexSniffed = Style_SniffShebang(tchText)) {
-        if (iEncoding != g_DOSEncoding || pLexSniffed != &lexDefault || (
+        if (iEncoding != g_DOSEncoding || pLexSniffed != &lexNULL || (
             lstrcmpi(lpszExt,L"nfo") && lstrcmpi(lpszExt,L"diz"))) {
           // Although .nfo and .diz were removed from the default lexer's
           // default extensions list, they may still presist in the user's INI
@@ -3519,8 +3468,8 @@ void Style_SetDefaultFont(HWND hwnd)
 {
   int iIdx = (bUse2ndDefaultStyle) ? 12 : 0;
   if (Style_SelectFont(hwnd,
-        lexDefault.Styles[0+iIdx].szValue,
-        COUNTOF(lexDefault.Styles[0].szValue),
+        lexNULL.Styles[0+iIdx].szValue,
+        COUNTOF(lexNULL.Styles[0].szValue),
         TRUE)) {
     fStylesModified = TRUE;
     Style_SetLexer(hwnd,pLexCurrent);
@@ -4335,7 +4284,7 @@ INT_PTR CALLBACK Style_ConfigDlgProc(HWND hwnd,UINT umsg,WPARAM wParam,LPARAM lP
         //TreeView_Expand(hwndTV,TreeView_GetRoot(hwndTV),TVE_EXPAND);
         TreeView_Select(hwndTV,currentLex,TVGN_CARET);
 
-        SendDlgItemMessage(hwnd,IDC_STYLEEDIT,EM_LIMITTEXT,COUNTOF(lexDefault.Styles[0].szValue)-1,0);
+        SendDlgItemMessage(hwnd,IDC_STYLEEDIT,EM_LIMITTEXT,COUNTOF(lexNULL.Styles[0].szValue)-1,0);
 
         MakeBitmapButton(hwnd,IDC_PREVSTYLE,g_hInstance,IDB_PREV);
         MakeBitmapButton(hwnd,IDC_NEXTSTYLE,g_hInstance,IDB_NEXT);
