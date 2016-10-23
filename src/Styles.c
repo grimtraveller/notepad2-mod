@@ -866,7 +866,7 @@ KEYWORDLIST KeyWords_PROPS = {
 "", "", "", "", "", "", "", "", "" };
 
 
-EDITLEXER lexPROPS = { SCLEX_PROPERTIES, 63015, L"Configuration Files", L"ini; inf; reg; cfg; properties; oem; sif; url; sed; theme", L"", &KeyWords_PROPS, {
+EDITLEXER lexPROPS = { SCLEX_PROPERTIES, 63015, L"Configuration Files", L"ini; inf; cfg; properties; oem; sif; url; sed; theme", L"", &KeyWords_INI, {
                      { STYLE_DEFAULT, 63126, L"Default", L"", L"" },
                      //{ SCE_PROPS_DEFAULT, L"Default", L"", L"" },
                      { SCE_PROPS_COMMENT, 63127, L"Comment", L"fore:#008000", L"" },
@@ -2324,6 +2324,7 @@ EDITLEXER lexYAML = { SCLEX_YAML, 63355, L"YAML", L"yaml; yml", L"", &KeyWords_Y
                       { SCE_YAML_OPERATOR, 63132, L"Operator", L"fore:#333366", L"" },
                       { -1, 00000, L"", L"", L"" } } };
 
+
 KEYWORDLIST KeyWords_VHDL = {
 "access after alias all architecture array assert attribute begin block body buffer bus case component configuration "
 "constant disconnect downto else elsif end entity exit file for function generate generic group guarded if impure in "
@@ -2355,6 +2356,26 @@ EDITLEXER lexVHDL = { SCLEX_VHDL, 63370, L"VHDL", L"vhdl; vhd", L"", &KeyWords_V
                        { SCE_VHDL_STDFUNCTION, 63373, L"Standard function", L"", L"" },
                        { SCE_VHDL_STDPACKAGE, 63374, L"Standard package", L"", L"" },
                        { SCE_VHDL_STDTYPE, 63375, L"Standard type", L"fore:#FF8000", L"" },
+                       { -1, 00000, L"", L"", L"" } } };
+
+
+KEYWORDLIST KeyWords_Registry = {
+"", "", "", "", "", "", "", "", "" };
+
+EDITLEXER lexRegistry = { SCLEX_REGISTRY, 63370, L"Windows Registry Files", L"reg", L"", &KeyWords_Registry, {
+                       { STYLE_DEFAULT, 63126, L"Default", L"", L"" },
+                       //{ SCE_REG_DEFAULT, 63126, L"Default", L"", L"" },
+                       { SCE_REG_COMMENT, 63127, L"Comment", L"fore:#008800", L"" },
+                       { SCE_REG_VALUENAME, 63376, L"Value Name", L"", L"" },
+                       { MULTI_STYLE(SCE_REG_STRING,SCE_REG_STRING_GUID,0,0), 63131, L"String", L"fore:#008000", L"" },
+                       { SCE_REG_VALUETYPE, 63377, L"Value Type", L"bold; fore:#00007F", L"" },
+                       { SCE_REG_HEXDIGIT, 63378, L"Hex", L"fore:#7F0B0C", L"" },
+                       { SCE_REG_ADDEDKEY, 63379, L"Added Key", L"fore:#000000; back:#FF8040; bold; eolfilled", L"" }, //fore:#530155
+                       { SCE_REG_DELETEDKEY, 63380, L"Deleted Key", L"fore:#FF0000", L"" },
+                       { SCE_REG_ESCAPED, 63381, L"Escaped", L"bold; fore:#7D8187", L"" },
+                       { SCE_REG_KEYPATH_GUID, 63382, L"GUID in Key Path", L"fore:#7B5F15", L"" },
+                       { SCE_REG_PARAMETER, 63294, L"Parameter", L"fore:#0B6561", L"" },
+                       { SCE_REG_OPERATOR, 63132, L"Operator", L"bold", L"" },
                        { -1, 00000, L"", L"", L"" } } };
 
 
@@ -2412,6 +2433,7 @@ PEDITLEXER pLexArray[NUMLEXERS] =
   &lexPS,
   &lexPY,
   &lexRC,
+  &lexRegistry,
   &lexRUBY,
   &lexBASH,
   &lexSQL,

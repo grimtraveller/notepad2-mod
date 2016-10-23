@@ -55,6 +55,7 @@ $(SCI_LEX_OBJDIR)\LexPerl.obj: $(SCI_LEX)\LexPerl.cxx $(LEX_HEADERS) $(SCI_LIB)\
 $(SCI_LEX_OBJDIR)\LexPowerShell.obj: $(SCI_LEX)\LexPowerShell.cxx $(LEX_HEADERS)
 $(SCI_LEX_OBJDIR)\LexProps.obj: $(SCI_LEX)\LexProps.cxx $(LEX_HEADERS)
 $(SCI_LEX_OBJDIR)\LexPython.obj: $(SCI_LEX)\LexPython.cxx $(LEX_HEADERS)
+$(SCI_LEX_OBJDIR)\LexRegistry.obj: $(SCI_LEX)\LexRegistry.cxx $(LEX_HEADERS)
 $(SCI_LEX_OBJDIR)\LexRuby.obj: $(SCI_LEX)\LexRuby.cxx $(LEX_HEADERS)
 $(SCI_LEX_OBJDIR)\LexSQL.obj: $(SCI_LEX)\LexSQL.cxx $(LEX_HEADERS) $(SCI_LIB)\OptionSet.h
 $(SCI_LEX_OBJDIR)\LexTCL.obj: $(SCI_LEX)\LexTCL.cxx $(LEX_HEADERS)
