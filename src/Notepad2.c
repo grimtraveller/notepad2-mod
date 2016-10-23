@@ -2173,7 +2173,7 @@ void MsgInitMenu(HWND hwnd,WPARAM wParam,LPARAM lParam)
     !(i == SCLEX_NULL || i == SCLEX_VBSCRIPT || i == SCLEX_MAKEFILE || i == SCLEX_VB || i == SCLEX_ASM ||
       i == SCLEX_SQL || i == SCLEX_PERL || i == SCLEX_PYTHON || i == SCLEX_PROPERTIES ||i == SCLEX_CONF ||
       i == SCLEX_POWERSHELL || i == SCLEX_BATCH || i == SCLEX_DIFF || i == SCLEX_BASH || i == SCLEX_TCL ||
-      i == SCLEX_AU3 || i == SCLEX_LATEX || i == SCLEX_AHK || i == SCLEX_RUBY || i == SCLEX_CMAKE || i == SCLEX_MARKDOWN ||
+      i == SCLEX_AU3 || i == SCLEX_LATEX || i == SCLEX_RUBY || i == SCLEX_CMAKE || i == SCLEX_MARKDOWN ||
       i == SCLEX_YAML || i == SCLEX_REGISTRY));
 
   EnableCmd(hmenu,IDM_EDIT_INSERT_ENCODING,*mEncoding[iEncoding].pszParseNames);
@@ -3377,6 +3377,28 @@ LRESULT MsgCommand(HWND hwnd,WPARAM wParam,LPARAM lParam)
       break;
 
 
+    case IDM_EDIT_INSERT_GUID:
+      {
+        UINT uCP;
+        GUID guid;
+        WCHAR wszGuid[40];
+        WCHAR *pwszGuid;
+        char mszGuid[40 * 4]; // UTF-8 max of 4 bytes per char
+
+        if (SUCCEEDED(CoCreateGuid(&guid))) {          
+          if (StringFromGUID2(&guid,wszGuid,COUNTOF(wszGuid))) {
+            pwszGuid = wszGuid + 1; // trim first brace char
+            wszGuid[wcslen(wszGuid) - 1] = L'\0'; // trim last brace char 
+            uCP = (SendMessage(hwndEdit,SCI_GETCODEPAGE,0,0) == SC_CP_UTF8) ? CP_UTF8 : CP_ACP;            
+            if (WideCharToMultiByte(uCP,0,pwszGuid,-1,mszGuid,COUNTOF(mszGuid),NULL,NULL)) {
+              SendMessage(hwndEdit,SCI_REPLACESEL,0,(LPARAM)mszGuid);
+            }
+          }
+        }
+      }
+      break;
+
+
     case IDM_EDIT_LINECOMMENT:
       switch (SendMessage(hwndEdit,SCI_GETLEXER,0,0)) {
         case SCLEX_NULL:
@@ -3409,6 +3431,7 @@ LRESULT MsgCommand(HWND hwnd,WPARAM wParam,LPARAM lParam)
         case SCLEX_CMAKE:
         case SCLEX_AVS:
         case SCLEX_YAML:
+        case SCLEX_COFFEESCRIPT:
           BeginWaitCursor();
           EditToggleLineComments(hwndEdit,L"#",TRUE);
           EndWaitCursor();
@@ -3416,7 +3439,6 @@ LRESULT MsgCommand(HWND hwnd,WPARAM wParam,LPARAM lParam)
         case SCLEX_ASM:
         case SCLEX_PROPERTIES:
         case SCLEX_AU3:
-        case SCLEX_AHK:
         case SCLEX_NSIS: // # could also be used instead
         case SCLEX_INNOSETUP:
           BeginWaitCursor();
@@ -3468,7 +3490,6 @@ LRESULT MsgCommand(HWND hwnd,WPARAM wParam,LPARAM lParam)
         case SCLEX_TCL:
         case SCLEX_AU3:
         case SCLEX_LATEX:
-        case SCLEX_AHK:
         case SCLEX_RUBY:
         case SCLEX_CMAKE:
         case SCLEX_MARKDOWN:
@@ -3490,6 +3511,9 @@ LRESULT MsgCommand(HWND hwnd,WPARAM wParam,LPARAM lParam)
           break;
         case SCLEX_LUA:
           EditEncloseSelection(hwndEdit,L"--[[",L"]]");
+          break;
+        case SCLEX_COFFEESCRIPT:
+          EditEncloseSelection(hwndEdit,L"###",L"###");
       }
       break;
 
@@ -6250,7 +6274,7 @@ void ParseCommandLine()
             LocalFree(lpSchemeArg);
             lpSchemeArg = NULL;
           }
-          iInitialLexer = 33;
+          iInitialLexer = 34;
           flagLexerSpecified = 1;
           break;
 
@@ -6259,7 +6283,7 @@ void ParseCommandLine()
             LocalFree(lpSchemeArg);
             lpSchemeArg = NULL;
           }
-          iInitialLexer = 34;
+          iInitialLexer = 35;
           flagLexerSpecified = 1;
           break;
 

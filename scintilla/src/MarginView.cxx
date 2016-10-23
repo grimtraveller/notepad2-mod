@@ -12,6 +12,7 @@
 #include <assert.h>
 #include <ctype.h>
 
+#include <stdexcept>
 #include <string>
 #include <vector>
 #include <map>
@@ -24,6 +25,7 @@
 #include "Scintilla.h"
 
 #include "StringCopy.h"
+#include "Position.h"
 #include "SplitVector.h"
 #include "Partitioning.h"
 #include "RunStyles.h"
@@ -102,6 +104,8 @@ MarginView::MarginView() {
 	pixmapSelMargin = 0;
 	pixmapSelPattern = 0;
 	pixmapSelPatternOffset1 = 0;
+	wrapMarkerPaddingRight = 3;
+	customDrawWrapMarker = NULL;
 }
 
 void MarginView::DropGraphics(bool freeObjects) {
@@ -189,7 +193,7 @@ void MarginView::PaintMargin(Surface *surface, int topLine, PRectangle rc, PRect
 
 	Point ptOrigin = model.GetVisibleOriginInMain();
 	FontAlias fontLineNumber = vs.styles[STYLE_LINENUMBER].font;
-	for (int margin = 0; margin <= SC_MAX_MARGIN; margin++) {
+	for (size_t margin = 0; margin < vs.ms.size(); margin++) {
 		if (vs.ms[margin].width > 0) {
 
 			rcSelMargin.left = rcSelMargin.right;
@@ -211,6 +215,9 @@ void MarginView::PaintMargin(Surface *surface, int topLine, PRectangle rc, PRect
 						break;
 					case SC_MARGIN_FORE:
 						colour = vs.styles[STYLE_DEFAULT].fore;
+						break;
+					case SC_MARGIN_COLOUR:
+						colour = vs.ms[margin].back;
 						break;
 					default:
 						colour = vs.styles[STYLE_LINENUMBER].back;
@@ -239,7 +246,7 @@ void MarginView::PaintMargin(Surface *surface, int topLine, PRectangle rc, PRect
 						levelPrev = model.pdoc->GetLevel(lineBack);
 					}
 					if (!(levelPrev & SC_FOLDLEVELHEADERFLAG)) {
-						if ((level & SC_FOLDLEVELNUMBERMASK) < (levelPrev & SC_FOLDLEVELNUMBERMASK))
+						if (LevelNumber(level) < LevelNumber(levelPrev))
 							needWhiteClosure = true;
 					}
 				}
@@ -260,8 +267,10 @@ void MarginView::PaintMargin(Surface *surface, int topLine, PRectangle rc, PRect
 				PLATFORM_ASSERT(visibleLine < model.cs.LinesDisplayed());
 				const int lineDoc = model.cs.DocFromDisplay(visibleLine);
 				PLATFORM_ASSERT(model.cs.GetVisible(lineDoc));
-				const bool firstSubLine = visibleLine == model.cs.DisplayFromDoc(lineDoc);
-				const bool lastSubLine = visibleLine == model.cs.DisplayLastFromDoc(lineDoc);
+				const int firstVisibleLine = model.cs.DisplayFromDoc(lineDoc);
+				const int lastVisibleLine = model.cs.DisplayLastFromDoc(lineDoc);
+				const bool firstSubLine = visibleLine == firstVisibleLine;
+				const bool lastSubLine = visibleLine == lastVisibleLine;
 
 				int marks = model.pdoc->GetMark(lineDoc);
 				if (!firstSubLine)
@@ -273,8 +282,8 @@ void MarginView::PaintMargin(Surface *surface, int topLine, PRectangle rc, PRect
 					// Decide which fold indicator should be displayed
 					const int level = model.pdoc->GetLevel(lineDoc);
 					const int levelNext = model.pdoc->GetLevel(lineDoc + 1);
-					const int levelNum = level & SC_FOLDLEVELNUMBERMASK;
-					const int levelNextNum = levelNext & SC_FOLDLEVELNUMBERMASK;
+					const int levelNum = LevelNumber(level);
+					const int levelNextNum = LevelNumber(levelNext);
 					if (level & SC_FOLDLEVELHEADERFLAG) {
 						if (firstSubLine) {
 							if (levelNum < levelNextNum) {
@@ -306,7 +315,7 @@ void MarginView::PaintMargin(Surface *surface, int topLine, PRectangle rc, PRect
 						needWhiteClosure = false;
 						const int firstFollowupLine = model.cs.DocFromDisplay(model.cs.DisplayFromDoc(lineDoc + 1));
 						const int firstFollowupLineLevel = model.pdoc->GetLevel(firstFollowupLine);
-						const int secondFollowupLineLevelNum = model.pdoc->GetLevel(firstFollowupLine + 1) & SC_FOLDLEVELNUMBERMASK;
+						const int secondFollowupLineLevelNum = LevelNumber(model.pdoc->GetLevel(firstFollowupLine + 1));
 						if (!model.cs.GetExpanded(lineDoc)) {
 							if ((firstFollowupLineLevel & SC_FOLDLEVELWHITEFLAG) &&
 								(levelNum > secondFollowupLineLevelNum))
@@ -374,7 +383,7 @@ void MarginView::PaintMargin(Surface *surface, int topLine, PRectangle rc, PRect
 								sprintf(number, "%c%c %03X %03X",
 									(lev & SC_FOLDLEVELHEADERFLAG) ? 'H' : '_',
 									(lev & SC_FOLDLEVELWHITEFLAG) ? 'W' : '_',
-									lev & SC_FOLDLEVELNUMBERMASK,
+									LevelNumber(lev),
 									lev >> 16
 									);
 							} else {
@@ -391,14 +400,18 @@ void MarginView::PaintMargin(Surface *surface, int topLine, PRectangle rc, PRect
 							rcNumber.top + vs.maxAscent, number, static_cast<int>(strlen(number)), drawAll);
 					} else if (vs.wrapVisualFlags & SC_WRAPVISUALFLAG_MARGIN) {
 						PRectangle rcWrapMarker = rcMarker;
-						rcWrapMarker.right -= 3;
+						rcWrapMarker.right -= wrapMarkerPaddingRight;
 						rcWrapMarker.left = rcWrapMarker.right - vs.styles[STYLE_LINENUMBER].aveCharWidth;
-						DrawWrapMarker(surface, rcWrapMarker, false, vs.styles[STYLE_LINENUMBER].fore);
+						if (customDrawWrapMarker == NULL) {
+							DrawWrapMarker(surface, rcWrapMarker, false, vs.styles[STYLE_LINENUMBER].fore);
+						} else {
+							customDrawWrapMarker(surface, rcWrapMarker, false, vs.styles[STYLE_LINENUMBER].fore);
+						}
 					}
 				} else if (vs.ms[margin].style == SC_MARGIN_TEXT || vs.ms[margin].style == SC_MARGIN_RTEXT) {
-					if (firstSubLine) {
-						const StyledText stMargin = model.pdoc->MarginStyledText(lineDoc);
-						if (stMargin.text && ValidStyledText(vs, vs.marginStyleOffset, stMargin)) {
+					const StyledText stMargin = model.pdoc->MarginStyledText(lineDoc);
+					if (stMargin.text && ValidStyledText(vs, vs.marginStyleOffset, stMargin)) {
+						if (firstSubLine) {
 							surface->FillRectangle(rcMarker,
 								vs.styles[stMargin.StyleAt(0) + vs.marginStyleOffset].back);
 							if (vs.ms[margin].style == SC_MARGIN_RTEXT) {
@@ -407,6 +420,12 @@ void MarginView::PaintMargin(Surface *surface, int topLine, PRectangle rc, PRect
 							}
 							DrawStyledText(surface, vs, vs.marginStyleOffset, rcMarker,
 								stMargin, 0, stMargin.length, drawAll);
+						} else {
+							// if we're displaying annotation lines, color the margin to match the associated document line
+							const int annotationLines = model.pdoc->AnnotationLines(lineDoc);
+							if (annotationLines && (visibleLine > lastVisibleLine - annotationLines)) {
+								surface->FillRectangle(rcMarker, vs.styles[stMargin.StyleAt(0) + vs.marginStyleOffset].back);
+							}
 						}
 					}
 				}
