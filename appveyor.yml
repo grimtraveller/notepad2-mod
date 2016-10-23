@@ -60,7 +60,7 @@ init:
 
 # to add several platforms to build matrix:
 platform:
-  - x86
+  - Win32
   - x64
 
 # build Configuration, i.e. Debug, Release, etc.
