@@ -143,6 +143,7 @@ SCI_LEX_OBJ = \
     $(SCI_LEX_OBJDIR)\LexLua.obj \
     $(SCI_LEX_OBJDIR)\LexMake.obj \
     $(SCI_LEX_OBJDIR)\LexMarkdown.obj \
+    $(SCI_LEX_OBJDIR)\LexMatlab.obj \
     $(SCI_LEX_OBJDIR)\LexNsis.obj \
     $(SCI_LEX_OBJDIR)\LexNull.obj \
     $(SCI_LEX_OBJDIR)\LexPascal.obj \
@@ -150,6 +151,7 @@ SCI_LEX_OBJ = \
     $(SCI_LEX_OBJDIR)\LexPowerShell.obj \
     $(SCI_LEX_OBJDIR)\LexProps.obj \
     $(SCI_LEX_OBJDIR)\LexPython.obj \
+    $(SCI_LEX_OBJDIR)\LexRegistry.obj \
     $(SCI_LEX_OBJDIR)\LexRuby.obj \
     $(SCI_LEX_OBJDIR)\LexSQL.obj \
     $(SCI_LEX_OBJDIR)\LexTCL.obj \

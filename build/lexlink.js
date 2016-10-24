@@ -23,6 +23,7 @@
     "lmLua",
     "lmMake",
     "lmMarkdown",
+    "lmMatlab",
     "lmNsis",
     "lmNull",
     "lmPascal",
@@ -30,6 +31,7 @@
     "lmPowerShell",
     "lmProps",
     "lmPython",
+    "lmRegistry",
     "lmRuby",
     "lmSQL",
     "lmTCL",
@@ -37,7 +39,8 @@
     "lmVBScript",
     "lmVHDL",
     "lmXML",
-    "lmYAML"
+    "lmYAML",
+
   );
 
   var fso = new ActiveXObject("Scripting.FileSystemObject");

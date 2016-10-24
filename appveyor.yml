@@ -1,0 +1,73 @@
+# Notes:
+#   - Minimal appveyor.yml file is an empty file. All sections are optional.
+#   - Indent each level of configuration with 2 spaces. Do not use tabs!
+#   - All section names are case-sensitive.
+#   - Section names should be unique on each level.
+
+#---------------------------------#
+#      general configuration      #
+#---------------------------------#
+
+# version format
+version: 1.0.{build}
+
+# you can use {branch} name in version format too
+# version: 1.0.{build}-{branch}
+
+# branches to build
+branches:
+  # whitelist
+  only:
+  - master
+
+  # blacklist
+  except:
+  - gh-pages
+  - coverity_scan
+
+# Do not build on tags (GitHub only)
+skip_tags: true
+
+#---------------------------------#
+#    environment configuration    #
+#---------------------------------#
+
+# Operating system (build VM template)
+os: Windows Server 2012
+
+image:
+- Visual Studio 2015
+- Visual Studio 2013
+
+# scripts that are called at very beginning, before repo cloning
+init:
+  - git config --global core.autocrlf input
+
+# environment:
+  # matrix:
+    # - MSVC_VERSION: "2015"
+    # - MSVC_VERSION: "2013"
+#    - MSVC_VERSION: "2012"
+#    - MSVC_VERSION: "2010"
+#    - MSVC_VERSION: "WDK"
+
+#---------------------------------#
+#       build configuration       #
+#---------------------------------#
+
+# build platform, i.e. x86, x64, Any CPU. This setting is optional.
+#platform: Any CPU
+
+# to add several platforms to build matrix:
+platform:
+  - Win32
+  - x64
+
+# build Configuration, i.e. Debug, Release, etc.
+#configuration: Release
+
+# to add several configurations to build matrix:
+configuration:
+ - Debug
+ - Release
+
