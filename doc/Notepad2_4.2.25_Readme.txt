@@ -1,0 +1,105 @@
+
+=======================================================================
+=                                                                     =
+=                                                                     =
+=   Notepad2 - light-weight Scintilla-based text editor for Windows   =
+=                                                                     =
+=                                                                     =
+=                                                   Notepad2 4.2.25   =
+=                                      (c) Florian Balmer 2004-2011   =
+=                                       http://www.flos-freeware.ch   =
+=                                                                     =
+=                                                                     =
+=======================================================================
+
+
+Description
+
+  Notepad2 is a light-weight, free and open source Notepad-like text
+  editor with syntax highlighting for a few commonly used languages.
+  It's based on the Scintilla source code editing component and works
+  on NT-based versions of Windows.
+
+
+Features
+
+  - Syntax highlighting: HTML, XML, PHP, ASP (JS, VBS), CSS,
+    JavaScript, VBScript, C/C++, C#, Resource Script, Makefiles, Java,
+    Visual Basic, Pascal, Assembly, SQL, Perl, Python, Configuration
+    Files, Apache Config Files, PowerShell, Batch Files, Diff Files
+  - Drag & drop text editing inside and outside Notepad2
+  - Basic regular expression search and replace
+  - Useful word, line and block editing shortcuts
+  - Rectangular selection (Alt+Mouse)
+  - Brace matching, auto indent, long line marker, zoom functions
+  - Support for Unicode, UTF-8, Unix and Mac text files
+  - Open shell links
+  - Mostly adjustable
+
+
+Installation and Uninstallation
+
+  Just put a copy of Notepad2.exe and Notepad2.ini to any directory on
+  your computer. To uninstall Notepad2, simply delete these two files.
+  Notepad2 does not create any registry entries on your computer.
+
+
+Source Code
+
+  Notepad2 is based on the Scintilla source code editing component:
+  http://www.scintilla.org
+
+  The full Notepad2 source code can be found at:
+  http://www.flos-freeware.ch
+
+
+More Information and Resources
+
+  For more information on Notepad2 features, how to replace Windows
+  Notepad, and answers to the most frequently asked questions (FAQ),
+  please visit the Notepad2 website:
+  http://www.flos-freeware.ch
+
+
+Feature Requests
+
+  Thank you very much for the overwhelming feedback about Notepad2!
+  Feature requests are always welcome, but please keep in mind that
+  Notepad2 has been designed as a compact Notepad replacement.
+
+
+Credits and Special Thanks
+
+  Here I would like to say "THANK YOU" to the developers of the great
+  Scintilla source code editing component [1], which is the core of
+  Notepad2. Without Scintilla, the rich features found in Notepad2
+  wouldn't have been possible!
+
+  [1] http://www.scintilla.org
+
+  Many thanks to everybody for sending me bug reports and useful hints.
+  A special thank goes to Roland Weigelt [2] for his helpful thoughts
+  and comments about Notepad2 features and usability in early develop-
+  ment stages. I'd also like to express my thanks to Timo Kunze [3],
+  Kai Liu [4], Moritz Kroll, Seunghun Thomas Lee [5] and Shawn
+  Brenneman for sending detailed bug reports and ready-to-use patches.
+
+  [2] http://www.roland-weigelt.de
+  [3] http://www.TimoSoft-Software.de
+  [4] http://code.kliu.org/misc/notepad2/
+  [5] stlee42@gmail.com
+
+
+Copyright
+
+  Notepad2 is FREE SOFTWARE and may be used and distributed freely.
+  Please do not charge any distribution or download fees for this
+  program, except for the cost of the distribution medium. The use of
+  this software is AT YOUR OWN RISK. See License.txt for full details.
+
+  If you have comments or questions, please drop me a note:
+  florian.balmer@gmail.com
+
+  (c) Florian Balmer 2004-2011
+
+###
