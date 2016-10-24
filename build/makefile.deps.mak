@@ -45,6 +45,7 @@ $(SCI_LEX_OBJDIR)\LexDiff.obj: $(SCI_LEX)\LexDiff.cxx $(LEX_HEADERS)
 $(SCI_LEX_OBJDIR)\LexErrorList.obj: $(SCI_LEX)\LexErrorList.cxx $(LEX_HEADERS)
 $(SCI_LEX_OBJDIR)\LexHTML.obj: $(SCI_LEX)\LexHTML.cxx $(LEX_HEADERS) $(SCI_LIB)\StringCopy.h
 $(SCI_LEX_OBJDIR)\LexInno.obj: $(SCI_LEX)\LexInno.cxx $(LEX_HEADERS)
+$(SCI_LEX_OBJDIR)\LexJSON.obj: $(SCI_LEX)\LexJSON.cxx $(LEX_HEADERS)
 $(SCI_LEX_OBJDIR)\LexLua.obj: $(SCI_LEX)\LexLaTeX.cxx $(LEX_HEADERS)
 $(SCI_LEX_OBJDIR)\LexMake.obj: $(SCI_LEX)\LexMake.cxx $(LEX_HEADERS)
 $(SCI_LEX_OBJDIR)\LexMarkdown.obj: $(SCI_LEX)\LexMarkdown.cxx $(LEX_HEADERS)

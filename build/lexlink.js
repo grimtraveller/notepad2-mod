@@ -18,6 +18,7 @@
     "lmDiff",
     "lmHTML",
     "lmInno",
+    "lmJSON",
     "lmLatex",
     "lmLua",
     "lmMake",
@@ -36,9 +37,10 @@
     "lmTCL",
     "lmVB",
     "lmVBScript",
+    "lmVHDL",
     "lmXML",
     "lmYAML",
-    "lmVHDL"
+
   );
 
   var fso = new ActiveXObject("Scripting.FileSystemObject");
