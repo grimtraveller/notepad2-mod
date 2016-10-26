@@ -43,14 +43,6 @@ image:
 init:
   - git config --global core.autocrlf input
 
-# environment:
-  # matrix:
-    # - MSVC_VERSION: "2015"
-    # - MSVC_VERSION: "2013"
-#    - MSVC_VERSION: "2012"
-#    - MSVC_VERSION: "2010"
-#    - MSVC_VERSION: "WDK"
-
 #---------------------------------#
 #       build configuration       #
 #---------------------------------#
@@ -71,3 +63,28 @@ configuration:
  - Debug
  - Release
 
+build:
+  project: build\Notepad2.sln
+  parallel: true
+  verbosity: minimal
+test: off
+artifacts:
+- path: bin\*
+  name: All
+deploy:
+- provider: S3
+  access_key_id: AKIAI4VB7CDI5OSQWNZQ
+  secret_access_key:
+    secure: 9xwFHowcFhrt9iH+mURWfNqfOH1XOviFw/VvFxtxETTxWSwDJ8ApkBEn/U++Dj65
+  region: us-west-2
+  bucket: notepad2
+  artifact: All
+  set_public: true
+  encrypt: true
+notifications:
+- provider: Email
+  to:
+  - mcneight+github@gmail.com
+  on_build_success: true
+  on_build_failure: true
+  on_build_status_changed: true

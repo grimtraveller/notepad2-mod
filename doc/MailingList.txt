@@ -1,0 +1,1483 @@
+======================================================================
+=                                                                    =
+=                                                                    =
+=   flo's freeware - Mailing List Archive                            =
+=   http://www.freelists.org/archive/flos-freeware/                  =
+=   (c) Florian Balmer 2005-2011                                     =
+=                                                                    =
+=                                                                    =
+======================================================================
+
+
+[flos-freeware] New Release: Notepad2 Version 4.2.25
+From: Florian Balmer <florian.balmer@xxxxxxxxx>
+To: flos-freeware@xxxxxxxxxxxxx
+Date: Fri, 6 May 2011 12:25:06 +0200
+
+
+Dear subscribers of this newsletter,
+
+The final version of Notepad2 4.2.25 is out now.
+
+There's no more changes compared to Notepad2 4.2.25-rc9. The new
+features are listed in the readme file, and commented on the mailing
+list (the archive is accessible through the Notepad2 website).
+
+Notepad2 is now available as a 64-bit build (AMD64 or x86-64 processor
+architecture, x64 for short). The 32-bit (x86) build is recommended
+for most cases, and the Notepad2 FAQ (accessible through the Notepad2
+website) explains in which cases it is preferable to use the x64
+build.
+
+The new Notepad2 Setup Tool can be used to replace Windows Notepad
+with Notepad2, using a clean, unintrusive registry-based method. The
+Windows Notepad can be restored by uninstalling Notepad2 from the
+Control Panel. Usage notes to the setup tool can be found in the
+Notepad2 FAQ, explaining command line switches, handling of settings
+on updating and uninstalling, and how to pin Notepad2 to the taskbar.
+
+The source code of the setup tool will be available on the Notepad2
+website, soon.
+
+  http://www.flos-freeware.ch/notepad2.html
+
+There's also new version of metapath, the Explorer-like add-on for
+Notepad2.
+
+  http://www.flos-freeware.ch/archive.html
+
+Best wishes,
+--flo
+
+
+----------------------------------------------------------------------
+
+
+[flos-freeware] Notepad2 4.2.25-rc9
+From: Florian Balmer <florian.balmer@xxxxxxxxx>
+To: flos-freeware@xxxxxxxxxxxxx
+Date: Thu, 5 May 2011 10:42:53 +0200
+
+
+Dear subscribers of this newsletter,
+
+Notepad2 4.2.25-rc9 has a new command to merge blank lines (Alt+Y), is
+able to jump to and restore scrolling positions more unerringly if
+word wrap is enabled (i.e. when reloading files, or jumping to
+positions with the /g command line switch), and fixes some cases with
+missing filename extensions in the title bar.
+
+  http://www.flos-freeware.ch/notepad2.html
+
+The final release of 4.2.25 will be readily available!
+
+Best wishes,
+--flo
+
+
+----------------------------------------------------------------------
+
+
+[flos-freeware] Notepad2 4.2.25-rc8
+From: Florian Balmer <florian.balmer@xxxxxxxxx>
+To: flos-freeware@xxxxxxxxxxxxx
+Date: Tue, 19 Apr 2011 20:04:30 +0200
+
+
+Dear subscribers of this newsletter,
+
+Notepad2 4.2.25-rc8 fixes a problem with the mouse cursor disappearing
+in some cases when hovering the editor margin (thanks to Pi for
+reporting this issue).
+
+If there's no more problem reports, the final version of Notepad2
+4.2.25 will be ready, soon.
+
+Download from the Notepad2 website:
+
+  http://www.flos-freeware.ch/notepad2.html
+
+Best wishes,
+--flo
+
+
+----------------------------------------------------------------------
+
+
+[flos-freeware] Notepad2 4.2.25-rc7
+From: Florian Balmer <florian.balmer@xxxxxxxxx>
+To: flos-freeware@xxxxxxxxxxxxx
+Date: Sat, 2 Apr 2011 11:14:51 +0200
+
+
+Dear subscribers of this newsletter,
+
+Notepad2 4.2.25-rc7 has been unleashed.
+
+The sort lines functionality has been expanded, there's support for
+column sorting (based on rectangular selections), and options to
+remove duplicate and unique lines, useful to compose positive and
+negative intersections from a set of selected lines.
+
+There's new functions to convert a single selected character to its
+hex code representation, and vice versa (Ctrl+Alt+X, Ctrl+Alt+C). They
+are Unicode-aware, and understand both \x## and \u#### hex codes. The
+Transform backslashes function in the find and replace dialogs now
+also accepts \u#### codes.
+
+Keyword highlighting for the various HTML-embedded languages has been
+fixed, thereby keywords have been updated to the latest working drafts
+of HTML5 and CSS3.
+
+Download from the Notepad2 website:
+
+  http://www.flos-freeware.ch/notepad2.html
+
+Best wishes,
+--flo
+
+
+----------------------------------------------------------------------
+
+
+[flos-freeware] Notepad2 4.2.25-rc6
+From: Florian Balmer <florian.balmer@xxxxxxxxx>
+To: flos-freeware@xxxxxxxxxxxxx
+Date: Mon, 14 Mar 2011 20:14:03 +0100
+
+
+Dear subscribers of this newsletter,
+
+There's some more fine-tuning required before the final release of
+Notepad2 4.2.25, so another "Release Candidate" (rc6) has been
+published.
+
+The modify lines dialog now provides some clickable links to
+facilitate insertion of the cryptic number macros. A bug with padding
+zeros has also been fixed (thanks to KamLeong Lai for reporting).
+
+The "Select To Next" (F2) and "Select To Previous" (Shift+F2) commands
+have been re-enabled, and can now be found in the "Edit", "Special"
+submenu. The "Select Up" and "Select Down" buttons have been removed
+from the find dialog. The new ways to use these commands are selecting
+the find text (Alt+F3) and hitting (Shift+)F2; pressing (Shift+)F2
+inside the find and replace dialogs; clicking the "Find Next" and
+"Find Previous" buttons while holding down the Shift key in the find
+and replace dialogs.
+
+The PHP keywords are now highlighted, again. Some more default
+filename extensions have been added to the PowerShell scheme.
+
+The leading "Unicode" portion has been removed from the descriptions
+of the UTF-8 and UTF-7 encodings, so they should be easier to find
+(visually and by typing) in the encoding selection lists.
+
+Download from the Notepad2 website:
+
+  http://www.flos-freeware.ch/notepad2.html
+
+Best wishes,
+--flo
+
+
+----------------------------------------------------------------------
+
+
+[flos-freeware] Notepad2 4.2.25-rc5
+From: Florian Balmer <florian.balmer@xxxxxxxxx>
+To: flos-freeware@xxxxxxxxxxxxx
+Date: Sun, 27 Feb 2011 11:43:43 +0100
+
+
+Dear subscribers of this newsletter,
+
+Notepad2 4.2.25-rc5 has been released.
+
+There's a new command line switch to determine if a new window should
+always stay on top (/o), or not (/o-). This setting is not saved on
+exit, unless explicitly changed through the settings menu.
+
+The hotkey Ctrl+Shift+P moves the Notepad2 window to a default
+position on the current screen. The hotkey to copy the current window
+position as a Notepad2.exe command line option to clipboard has been
+remapped to Ctrl+Shift+K.
+
+Download from the Notepad2 website:
+
+  http://www.flos-freeware.ch/notepad2.html
+
+There's also an update to metapath, fixing a problem with passing
+command line switches to the external quick viewer program. The
+command to move the window to a default position has also been added
+to metapath.
+
+  http://www.flos-freeware.ch/archive.html
+
+Best wishes,
+--flo
+
+
+----------------------------------------------------------------------
+
+
+[flos-freeware] Notepad2 4.2.25-rc4
+From: Florian Balmer <florian.balmer@xxxxxxxxx>
+To: flos-freeware@xxxxxxxxxxxxx
+Date: Mon, 14 Feb 2011 21:24:29 +0100
+
+
+Dear subscribers of this newsletter,
+
+Notepad2 4.2.25-rc4 fixes the duplicate hotkey Ctrl+Alt+U (many thanks
+to Nik Mennega for reporting this one).
+
+Available here:
+
+  http://www.flos-freeware.ch/notepad2.html
+
+Best wishes
+--flo
+
+
+----------------------------------------------------------------------
+
+
+[flos-freeware] Notepad2 4.2.25-rc3
+From: Florian Balmer <florian.balmer@xxxxxxxxx>
+To: flos-freeware@xxxxxxxxxxxxx
+Date: Sun, 13 Feb 2011 21:42:27 +0100
+
+
+Dear subscribers of this newsletter,
+
+Notepad2 4.2.25-rc3 has been published.
+
+The changes include a simplification of the caret (cursor) settings by
+merging the two caret items (size and color) into one. Along with
+this, a new option has been added to stop the caret from blinking, see
+Notepad2 FAQ [1]. Moreover, a bug with the extra line spacing setting
+not saved correctly in some cases has been fixed. Thanks to Nissim
+Salinas for initiating these improvements.
+
+Download from the Notepad2 website:
+
+  http://www.flos-freeware.ch/notepad2.html
+
+Many people keep asking me whether they should use the x86 or the x64
+build of Notepad2. I've added some information to help with this
+decision to the Notepad2 FAQ [1] (last topic).
+
+[1] http://www.flos-freeware.ch/doc/notepad2-FAQs.html
+
+This is presumably the last "Release Candidate" before the final
+release of Notepad2 version 4.2.25.
+
+All the best
+--flo
+
+
+----------------------------------------------------------------------
+
+
+[flos-freeware] Notepad2 4.2.25-rc2
+From: Florian Balmer <florian.balmer@xxxxxxxxx>
+To: flos-freeware@xxxxxxxxxxxxx
+Date: Thu, 3 Feb 2011 20:14:10 +0100
+
+
+Dear subscribers of this newsletter,
+
+Notepad2 4.2.25-rc2 is out.
+
+Due to some complaints about the missing ability to suppress the "Text
+not found" notification message, I have decided to restore the
+previous behaviour. However, the ini-file can be tweaked to prevent
+individual messages from being suppressed, as explained in the
+Notepad2 FAQ, topic "How to reset the Notepad2 notification
+messages?".
+
+Available from the Notepad2 website:
+
+  http://www.flos-freeware.ch/notepad2.html
+
+Best wishes,
+--flo
+
+
+----------------------------------------------------------------------
+
+
+[flos-freeware] Notepad2 4.2.25-rc1
+From: Florian Balmer <florian.balmer@xxxxxxxxx>
+To: flos-freeware@xxxxxxxxxxxxx
+Date: Tue, 1 Feb 2011 22:16:27 +0100
+
+
+Dear subscribers of this newsletter,
+
+Notepad2 4.2.25-rc1 is now available.
+
+There's a new command to align lines (Alt+J), either left, right,
+centered or block justified, taking into account indenting whitespace.
+Block justification has a paragraph mode, causing lines followed by a
+blank line and a text length of less than 80% of the block width to be
+left aligned, forming a visual closure to the paragraph.
+
+The modify lines (Alt+M) dialog supports several variables to insert
+continuous numbers, either zero-based, one-based, or based on the
+document line numbers, with or without padding zeros. The sort lines
+dialog (Alt+O) has a new option to shuffle lines.
+
+Files can now be recoded in UTF-16 Little Endian and UTF-16 Big Endian
+formats, for cases where Unicode detection is inappropriate. The new
+hotkey Ctrl+Shift+F recodes the current file in the default encoding
+set by the user.
+
+Analogous to "Tab key reformats indentation", there's a "Backspace
+reformats indentation" option (Ctrl+T) to control the behaviour of the
+backspace key inside indenting whitespace (delete or unindent).
+
+The update to Scintilla 2.24 introduces some improvements to the
+search functionality: Notepad2 now finally supports case insensitive
+searching for non-ASCII characters! The built-in regular expression
+engine has a new ? operator, acting as a 0-or-1-times quantifier, or a
+non-greedy modifier to the * and + quantifiers. For example, <.+>
+matches all HTML tags on a line, whereas <.+?> matches only one tag.
+The syntax for regular expression tagged regions has been simplified
+from \(...\) to (...), called POSIX compatible mode in Scintilla. As a
+consequence, bare ( and ) need to be matched using \( and \) in
+regular expression mode.
+
+Some find and replace hotkeys (F3, Shift+F3, Alt+F3 and F4) also work
+inside the find and replace dialog boxes. And, it's no longer possible
+to suppress the text not found message.
+
+Additional Emacs file variables allow control over word wrap
+(truncate-lines), tab key behaviour (c-tab-always-indent), and file
+variable parsing itself (enable-local-variables). The statement
+"enable-local-variables=false" within the 512 head or tail bytes of a
+file will shut down file variable parsing.
+
+If the default font has been set to "Consolas", there's a fallback to
+"Lucida Console" on systems where "Consolas" is not installed. This
+improves settings portability between Windows 7 and earlier versions
+of Windows.
+
+The new /l and /l- command line switches can be used to enable or
+disable auto-reloading of files modified by external programs. A
+timeout before auto-reloading files prevents potential read/write
+locks (can be configured in the Notepad2 ini-file).
+
+Handling of pathnames on the command line is now more flexible and
+also accepts forward slashes as pathname separators. Everything
+following the + or - switches is now considered a pathname, thus
+allowing pathnames with / and - as their first character:
+
+  notepad2.exe - /dir/file
+
+Furthermore, there's various smaller changes to syntax schemes and
+keywords, the Notepad .LOG feature has been fixed, Notepad2 no longer
+locks any directories except the one where Notepad2.exe resides, and
+filename extensions are always displayed, regardless of the Windows
+Explorer settings. Ctrl+Shift+P copies the current window position as
+a Notepad2.exe command line option to clipboard. The unnecessary
+notification messages after importing and exporting style settings
+have been removed, but an adequate error message pops up if there's a
+failure when exporting styles.
+
+The toolbar buttons should look better on Windows 2000, and the
+appearance of the disabled toolbar buttons has been modernized on
+Windows XP and newer versions of Windows (can be manually reset
+through an ini-file option).
+
+The official release of Notepad2.exe is now available as a 64-bit
+build (AMD64 or x86-64 processor architecture, x64 for short). The
+64-bit target machine of the executable file is indicated in the
+Notepad2.exe file properties (right-click in Windows Explorer, and
+choose Properties).
+
+Last but not least, Notepad2 has a tiny setup tool to replace Windows
+Notepad with Notepad2 [1], based on the setup program created by Kai
+Liu [2]. Complete uninstallation is possible through Windows Control
+Panel.
+
+  [1] http://www.flos-freeware.ch/doc/notepad2-Replacement.html
+  [2] http://code.kliu.org/misc/notepad2/
+
+The 64-bit portability warnings have been eliminated from the source
+code, and the build scripts have been simplified with a makefile.
+Notepad2 4.2.25-rc1 is based on Scintilla 2.24. The source code of the
+setup tool will be published with the final release of Notepad2
+4.2.25.
+
+Download from the Notepad2 website:
+
+  http://www.flos-freeware.ch/notepad2.html
+
+There's also new 64-bit build of metapath, the Explorer-like add-on
+for Notepad2.
+
+  http://www.flos-freeware.ch/archive.html
+
+Best wishes,
+--flo
+
+
+----------------------------------------------------------------------
+
+
+[flos-freeware] Updates to modified versions of Notepad2
+From: Florian Balmer <florian.balmer@xxxxxxxxx>
+To: flos-freeware@xxxxxxxxxxxxx
+Date: Sun, 21 Nov 2010 11:22:39 +0100
+
+
+Dear subscribers of this newsletter,
+
+Today I'm announcing updates to some modified versions of Notepad2:
+the code folding patches initiated by Kai Liu have been adapted to the
+most recent version of Notepad2. Download links can be found on the
+Notepad2 website:
+
+  http://www.flos-freeware.ch/notepad2.html
+
+There's some work in progress on my official version of Notepad2,
+focusing on editing features, bug fixes and detail improvements.
+Still, I'm not sure whether or not to merge the code folding patches
+into my official source code tree. For the moment, people who'd like
+to use this feature could try the modified versions mentioned above.
+
+Best wishes,
+--flo
+
+
+----------------------------------------------------------------------
+
+
+[flos-freeware] Notepad2 Source Code Update
+From: Florian Balmer <florian.balmer@xxxxxxxxx>
+To: flos-freeware@xxxxxxxxxxxxx
+Date: Fri, 5 Mar 2010 10:25:17 +0100
+
+
+Dear subscribers of this newsletter,
+
+Thanks to feedback by several people, I have improved my WDK build
+scripts shipped with the Notepad2 source code. The scripts now
+completely rely on the WDK tools, there's no more dependencies on
+Visual C++ tools and header files. It's now possible to rebuild
+Notepad2 using only the WDK tools, refer to the Readme.txt file
+included in the Notepad2 source zip for more information.
+
+This update does not affect Notepad2 executable files.
+
+Best wishes,
+--flo
+
+
+----------------------------------------------------------------------
+
+
+[flos-freeware] New Release: Notepad2 Version 4.1.24
+From: Florian Balmer <florian.balmer@xxxxxxxxx>
+To: flos-freeware@xxxxxxxxxxxxx
+Date: Tue, 2 Mar 2010 11:31:39 +0100
+
+
+Dear subscribers of this newsletter,
+
+Notepad2 version 4.1.24 has been released.
+
+Compared to the preliminary "Release Candidate" versions, there's only
+a few minor changes.
+
+There's a new option (accessible through the "Tab Settings" dialog) to
+specify whether the tab key should reformat indenting whitespace
+(according to the current indentation settings), or just insert a tab
+character (or the corresponding amount of spaces, depending on the
+selected preferences), if the cursor is placed inside indenting
+whitespace. It's always possible to insert a tab character by pressing
+Ctrl+Tab.
+
+Pathnames are stored relative to My Documents to enhance USB stick
+portability between Windows XP and newer versions of Windows. This
+affects MRU lists as well as the "Favorites" and "Open with..."
+directories, and can be disabled in the ini-file.
+
+The cursor visibility patch originally submitted by Kai Liu has been
+rewritten to be more general, and ensure a minimum contrast between
+the cursor color and the background color.
+
+  http://www.flos-freeware.ch/notepad2.html
+
+There's also an update for metapath, my file browser plugin. The
+operating system-independent handling of the My Documents location has
+also been enabled for metapath, and a bug to keep visited directories
+locked has been fixed.
+
+  http://www.flos-freeware.ch/archive.html
+
+Best wishes,
+--flo
+
+
+----------------------------------------------------------------------
+
+
+[flos-freeware] Release Candidate 3: Notepad2 Version 4.1.24
+From: Florian Balmer <florian.balmer@xxxxxxxxx>
+To: flos-freeware@xxxxxxxxxxxxx
+Date: Sun, 7 Feb 2010 11:08:17 +0100
+
+
+Dear subscribers of this newsletter,
+
+The next "Release Candidate" of Notepad2 is available. Due to some
+important new features, the minor revision number has been increased
+in the meantime, that's why Notepad2 4.0.24-rc2 is followed by
+Notepad2 4.1.24-rc3.
+
+The /z command line switch (to support registry-based Notepad
+replacement) now has the same effect as the - command line switch
+(accept only a single non-quoted filename argument), to ensure best
+compatibility when using Notepad2 as a Windows Notepad replacement.
+
+Notepad2 now displays an indicator in the title bar if running with
+elevated (administrator) privileges on Windows Vista and above.
+Elevated instances will be isolated from instances running with
+standard privileges regarding window reuse and single file instance
+features. A new /u command line switch simplifies launching
+Notepad2.exe with administrator rights (brings up the UAC prompt).
+
+Error messages for file operation failures are now more informative,
+they also display the operating system error message text.
+
+Some changes to the syntax highlighting schemes include new HTML and
+XML element text styles, improved utilization of default styles for
+schemes embedded within HTML, and the possibility to change the size
+of the visible white space dots. Moreover, word wrap settings have
+been adapted to allow more control over visual indicator display.
+
+Download from the Notepad2 website:
+
+  http://www.flos-freeware.ch/notepad2.html
+
+Best wishes,
+--flo
+
+
+----------------------------------------------------------------------
+
+
+[flos-freeware] Release Candidate 2: Notepad2 Version 4.0.24
+From: Florian Balmer <florian.balmer@xxxxxxxxx>
+To: flos-freeware@xxxxxxxxxxxxx
+Date: Tue, 5 Jan 2010 11:52:08 +0100
+
+
+Dear subscribers of this newsletter,
+
+Another "Release Candidate" (rc2) of Notepad2 4.0.24 is available.
+
+There's some new ini-file options to control system MRU, taskbar and
+jump list behaviour. These settings can be useful to enable recent
+file access through the Windows 7 jump lists if Notepad2 is used as a
+Windows Notepad replacement. The documentation has been updated to
+explain the new settings.
+
+  http://www.flos-freeware.ch/doc/notepad2-Replacement.html
+
+Download from the Notepad2 website:
+
+  http://www.flos-freeware.ch/notepad2.html
+
+Best wishes,
+--flo
+
+
+----------------------------------------------------------------------
+
+
+[flos-freeware] Release Candidate: Notepad2 Version 4.0.24
+From: Florian Balmer <florian.balmer@xxxxxxxxx>
+To: flos-freeware@xxxxxxxxxxxxx
+Date: Wed, 16 Dec 2009 16:58:04 +0100
+
+
+Dear subscribers of this newsletter,
+
+Notepad2 version 4.0.24 is now available as a "Release Candidate". I'm
+planning to distribute the final version as soon as the next full
+version of the Scintilla source code editing component will be
+available. That's why the source code documentation says Notepad2
+4.0.24 depends on Scintilla 2.02, but it's in fact the current CVS
+snapshot (2.01-cvs $Date: 2009/12/16 $).
+
+The most notable new feature is support for the /z command line switch
+introduced by Kai Liu, to support registry-based Notepad replacement.
+
+  http://www.flos-freeware.ch/doc/notepad2-Replacement.html
+
+Another change is that font smoothing (anti-aliasing) can be
+controlled globally for the Notepad2 window, independently of the
+system default setting. This is useful for scenarios where
+anti-aliasing is generally preferred and a certain font looks better
+without, or where system restrictions prevent changing the
+anti-aliasing settings.
+
+  http://www.flos-freeware.ch/doc/notepad2-FAQs.html#q6
+
+As of version 2.x, the Scintilla editing component makes use of the
+STL. I haven't been able to rebuild the source codes using my custom
+Visual C++ 6.0/7.0 build farm, any more, that's why I switched to the
+WDK 7.0 build environment. Like this it's still possible to use the
+system CRT and create a tiny and fast executable file with cutting
+edge technology (that is, the up-to-date msvcrt.dll and msvcp60.dll
+runtime libraries available on any Windows system).
+
+My build scripts are included in the Notepad2 source code package. For
+the future, I may create a new section on my website with
+documentation and examples how to build Notepad2 with other
+development tools.
+
+Download from the Notepad2 website:
+
+  http://www.flos-freeware.ch/notepad2.html
+
+Best wishes,
+--flo
+
+
+----------------------------------------------------------------------
+
+
+[flos-freeware] New Release: Notepad2 Version 4.0.23
+From: Florian Balmer <florian.balmer@xxxxxxxxx>
+To: flos-freeware@xxxxxxxxxxxxx
+Date: Tue, 6 Oct 2009 18:51:20 +0200
+
+
+Dear subscribers of this newsletter,
+
+Notepad2 version 4.0.23 has been released.
+
+There is now support for PowerShell Script syntax highlighting.
+Besides that, some of the syntax schemes have been simplified, and the
+default settings have been revised. Also, some bugs and annoyances
+have been corrected, and internal changes allow complete
+internationalization of the Notepad2 executable file from resource
+strings (a future project).
+
+  http://www.flos-freeware.ch/notepad2.html
+
+I hope that Kai Liu, who is maintaining an extended version of
+Notepad2 to support code folding and other enhancements, will also
+update his work, soon.
+
+  http://code.kliu.org/misc/notepad2/
+
+Best wishes,
+--flo
+
+
+----------------------------------------------------------------------
+
+
+[flos-freeware] New Release: Notepad2 Version 4.0.22
+From: Florian Balmer <florian.balmer@xxxxxxxxx>
+To: flos-freeware@xxxxxxxxxxxxx
+Date: Tue, 28 Jul 2009 11:42:39 +0200
+
+
+Dear subscribers of this newsletter,
+
+The final version of Notepad2 4.0.22 has been published.
+
+As advertised in the release notes for the 4.0-beta versions, the
+major addition is enhanced support for numerous Windows, DOS, ISO, Mac
+and IBM EBCDIC encodings, as well as for additional Unicode
+Transformation Formats like UTF-7 and GB18030. With auto-detection of
+encoding tags, including HTML/XML meta tags to specify the character
+encoding, the new features are convenient to use.
+
+Besides that, the File Change Notification settings are regrouped in a
+dialog box, and provide an option to automatically reload unmodified
+files. Other changes cover special variants of the tabify and untabify
+commands to modify only indenting whitespace, and hotkeys to increase
+or decrease selected integral or hexadecimal numbers. Find results are
+scrolled away from the top and bottom borders, so that more contextual
+lines are visible.
+
+Due to consolidation of redundant styles to simplify customization
+(affecting mostly comments and strings), some style settings may have
+to be readapted. Also note there's now a default setting of +2 for
+extra line spacing (can be removed).
+
+  http://www.flos-freeware.ch/notepad2.html
+
+Special thanks to Kai Liu, who has again contributed useful features
+and fixes. Kai is maintaining an extended version of Notepad2 to
+support code folding, an installer allowing clean and completely
+undoable Windows Notepad replacement, additional syntax schemes, and
+other improvements.
+
+  http://code.kliu.org/misc/notepad2/
+
+Also thank you very much to everybody for sending me interesting
+feedback, feature requests, and problem reports. Notepad2 is still
+just a hobby, yet, from time to time, I'm putting all my heart and
+soul into this project.
+
+So, what's next?
+
+The two most laborious items on my task list for Notepad2 have been
+accomplished, in the past year: creating a native Win32 Unicode build,
+and adding enhanced encoding support. Currently, there's no major new
+features of the same scale I'd like to integrate into Notepad2.
+
+The most frequently requested features by Notepad2 users are:
+
+* Enhanced regular expression engine. Recent versions of the Scintilla
+source code editing component allow embedding an external regex
+library.
+
+* Display text statistics (mostly word and character counting).
+Currently, the statusbar displays bytes instead of characters in
+non-ANSI mode.
+
+* More extensive print header customization (display additional file
+information, allow custom fonts).
+
+At the current stage I do not promise I will work on these features,
+straight away, but I will certainly keep this list in mind for future
+development.
+
+Best wishes,
+--flo
+
+
+----------------------------------------------------------------------
+
+
+[flos-freeware] Notepad2 4.0.22-beta5
+From: Florian Balmer <florian.balmer@xxxxxxxxx>
+To: flos-freeware@xxxxxxxxxxxxx
+Date: Tue, 21 Jul 2009 13:37:58 +0200
+
+
+Dear subscribers of this newsletter,
+
+Despite my recent announcement of features being complete for 4.0.22,
+I have decided to merge some more useful patches contributed by Kai
+Liu into my own source code branch.
+
+The most visible addition is a consolidation of styles that are
+equivalent in practical use, but differentiated internally. This
+simplifies configuration of line and block comments, single and double
+quoted strings, and some other styles. Another patch ensures the
+cursor stays visible on any background color.
+
+  http://www.flos-freeware.ch/notepad2.html
+
+The final version of Notepad2 4.0.22 should be ready within a week.
+
+Best wishes,
+--flo
+
+
+----------------------------------------------------------------------
+
+
+[flos-freeware] Notepad2 4.0.22-beta4
+From: Florian Balmer <florian.balmer@xxxxxxxxx>
+To: flos-freeware@xxxxxxxxxxxxx
+Date: Thu, 16 Jul 2009 17:00:07 +0200
+
+
+Dear subscribers of this newsletter,
+
+Another beta version of Notepad2 4.0.22 has been published.
+
+When reloading files (either manually or automatically through the
+file change notification feature), Notepad2 tries to be smarter at
+keeping the current encoding. If new byte order marks, encoding tags
+or invalid byte sequences (for the current encoding) have been added
+to the file, usual encoding detection is performed, otherwise, the
+encoding is preserved.
+
+As in previous versions, files with unrecognized encoding tags are
+loaded in ANSI mode (if encoding tag parsing is enabled).
+
+Some cleanup with Chinese Simplified encodings was done: GB2312 was
+correctly renamed to GBK (which includes the GB2312 subset), and
+GB18030 (being the current standard) was added.
+
+The way encoding settings are stored has been refurbished, again: for
+non-standard encodings, the Windows code page id number is remembered.
+It's easier to track down problems like this, and the settings are
+resistant to future expansion. Compatibility to Notepad2 3.x is
+assured, but 4.0-beta users may need to reconfigure default encoding
+options, one last time.
+
+My official Notepad2.exe program file will no longer be compressed
+with UPX. This slightly increases disk space usage, but reduces
+virtual memory consumption if running multiple instances. Users
+preferring a minimal executable file size can still use UPX to achieve
+this.
+
+The features scheduled for Notepad2 4.0.22 are completed, and so far
+also stable. The final version of Notepad2 4.0.22 can be expected to
+be released, soon.
+
+Best wishes,
+--flo
+
+
+----------------------------------------------------------------------
+
+
+[flos-freeware] Notepad2 4.0.22-beta3
+From: Florian Balmer <florian.balmer@xxxxxxxxx>
+To: flos-freeware@xxxxxxxxxxxxx
+Date: Sat, 11 Jul 2009 17:50:10 +0200
+
+
+Dear subscribers of this newsletter,
+
+The 3rd beta version of Notepad2 4.0.22 has been released.
+
+The effective range of the --e command line switch has been expanded
+to newly created files and untitled documents.
+
+The following command will now bring up a Notepad2 window in KOI8-R
+mode:
+
+  notepad2.exe --e koi8-r
+
+The next example demonstrates how to silently create a new file in the
+desired encoding:
+
+  notepad2.exe --e ibm437 --q c:\dir\newfile.txt
+
+Support for some common EBCDIC encodings has been enabled, as well.
+
+Encoding ini-settings are mapped back to the previous settings as of
+Notepad2 version 3.x to retain ini-file compatibility. Users of
+Notepad2 4.0.22-beta1 and beta2 may need to set default encoding
+options, once again.
+
+A new option to set extra line spacing has been added to the default
+and 2nd default schemes.
+
+Download from the Notepad2 website:
+
+  http://www.flos-freeware.ch/notepad2.html
+
+Best wishes,
+--flo
+
+
+----------------------------------------------------------------------
+
+
+[flos-freeware] Notepad2 4.0.22-beta2
+From: Florian Balmer <florian.balmer@xxxxxxxxx>
+To: flos-freeware@xxxxxxxxxxxxx
+Date: Fri, 3 Jul 2009 22:58:03 +0200
+
+
+Dear subscribers of this newsletter,
+
+The 2nd beta version of Notepad2 4.0.22 has been released.
+
+File change notification settings have been regrouped inside a dialog
+box that can be reached with a hotkey (Alt+F5). There's an option to
+reset file change notification each time a new file is opened.
+
+The word wrap settings have been revised, and new options available
+through the Scintilla editing component have been enabled.
+
+Besides that, some minor coding bugs have been fixed (discovered when
+reviewing patches by Kai Liu [1], thanks!) and some minor glitches
+have been corrected.
+
+  [1] http://code.kliu.org/misc/notepad2/
+
+Download from the Notepad2 website:
+
+  http://www.flos-freeware.ch/notepad2.html
+
+Best wishes,
+--flo
+
+
+----------------------------------------------------------------------
+
+
+[flos-freeware] Notepad2 4.0.22-beta1
+From: Florian Balmer <florian.balmer@xxxxxxxxx>
+To: flos-freeware@xxxxxxxxxxxxx
+Date: Thu, 25 Jun 2009 17:57:31 +0200
+
+
+Dear subscribers of this newsletter,
+
+I have been working on a new version of Notepad2 with enhanced
+encoding support, for some time. I have now decided to merge the 3.x
+branch (a maintenance update was ready) with the next big development
+step, so here's the first beta version of Notepad2 4.0.
+
+Notepad2 now provides seamless support for numerous Windows, DOS, ISO
+and Mac encodings. The new encoding features are summarized here:
+
+  http://www.flos-freeware.ch/doc/notepad2-Encoding.html
+
+Other changes include special variants of the tabify and untabify
+commands only modifying indenting whitespace, and hotkeys to increase
+or decrease selected integral numbers.
+
+File change notification has been extended with an option to
+automatically reload files modified by external programs. For unsaved
+or deleted files, Notepad2 still keeps displaying a confirmation
+prompt. If the caret is at the last position, the file tail is
+scrolled into view after the refresh.
+
+And, I've made an attempt to scroll find results away from the top or
+bottom window borders, so that more contextual lines can be seen.
+
+The rest is just small details, listed in the Notepad2 readme file.
+
+  http://www.flos-freeware.ch/notepad2.html
+
+Best wishes
+--flo
+
+
+----------------------------------------------------------------------
+
+
+[flos-freeware] New Release: Notepad2 Version 3.1.21
+From: Florian Balmer <florian.balmer@xxxxxxxxx>
+To: flos-freeware@xxxxxxxxxxxxx
+Date: Sun, 21 Jun 2009 12:54:54 +0200
+
+
+Dear subscribers of this newsletter,
+
+Many things were keeping me away from the computer, in the last weeks,
+and I've never really taken care of packaging and releasing the final
+version of Notepad2 3.1.21.
+
+There's no more new features as compared to the recent Release
+Candidate versions. I've incorporated some patches by Kai Liu to
+create non-existent ini-file directories, and some fixes to the Apache
+Config Files syntax scheme.
+
+  http://www.flos-freeware.ch/notepad2.html
+
+A new version of metapath has also been uploaded to my website, mostly
+a service and bugfix release.
+
+Best wishes,
+--flo
+
+
+----------------------------------------------------------------------
+
+
+[flos-freeware] Release Candidate 4: Notepad2 Version 3.1.21
+From: Florian Balmer <florian.balmer@xxxxxxxxx>
+To: flos-freeware@xxxxxxxxxxxxx
+Date: Tue, 10 Mar 2009 16:16:58 +0100
+
+
+Dear subscribers of this newsletter,
+
+The presumably last "Release Candidate" (rc4) before the final release
+of Notepad2 version 3.1.21 is ready.
+
+Recent files are now stored with pathnames relative to the Notepad2
+program directory, so they can still be opened if Notepad2 is used
+from portable drives with changing drive letters. This feature is
+disabled for the system drive (where multiple copies of Notepad2.exe
+might be around), and can be turned off completely in the ini-file.
+
+The find wrap notification dialogs now provide an option to stop
+searching, instead of restarting from the opposite end of the file.
+There's also an option to suppress the replace count notification.
+
+The new "Pad With Spaces" command (Alt+B) can be used to fill in
+spaces up to the longest line. This works with normal text selection,
+block selection, or without any selection.
+
+  http://www.flos-freeware.ch/notepad2.html
+
+Best wishes
+--flo
+
+
+----------------------------------------------------------------------
+
+
+[flos-freeware] Release Candidate 3: Notepad2 Version 3.1.21
+From: Florian Balmer <florian.balmer@xxxxxxxxx>
+To: flos-freeware@xxxxxxxxxxxxx
+Date: Wed, 25 Feb 2009 11:43:00 +0100
+
+
+Dear subscribers of this newsletter,
+
+The next "Release Candidate" (rc3) of Notepad2 version 3.1.21 has been
+published.
+
+This update restores compatibility of the command line format with
+previous versions of Notepad2. By default, Notepad2 now again accepts
+only a single filename on the command line. Like this, it's not
+necessary to quote filenames containing spaces:
+
+  Notepad2.exe test sample instance
+  (opens the file "test sample instance")
+
+To open multiple files from the command line, the new + switch can be
+specified:
+
+  Notepad2.exe + test sample instance
+  (opens the files "test", "sample" and "instance")
+
+(It may also be useful to add the /p0 command line switch when opening
+multiple files, to arrange windows cascaded).
+
+To allow opening multiple files by default, the following setting in
+the Notepad2 ini-file can be modified (set to "1"):
+
+  [Settings2]
+  ...
+  MultiFileArg=1
+
+With this changed default behaviour, it's possible to drop multiple
+files on a Notepad2.exe icon, or use Notepad2 from Explorer's "Send
+to..." menu with multiple files selected. To switch back to the
+old-compatible command line mode, even if the default behaviour has
+been modified in the ini-file, the new - command line option is
+useful:
+
+  Notepad2.exe - test sample instance
+  (opens the file "test sample instance")
+
+Download from the Notepad2 website:
+
+  http://www.flos-freeware.ch/notepad2.html
+
+Greetings,
+--flo
+
+
+----------------------------------------------------------------------
+
+
+[flos-freeware] Release Candidate 2: Notepad2 Version 3.1.21
+From: Florian Balmer <florian.balmer@xxxxxxxxx>
+To: flos-freeware@xxxxxxxxxxxxx
+Date: Mon, 23 Feb 2009 10:52:53 +0100
+
+
+Dear subscribers of this newsletter,
+
+Another "Release Candidate" (rc2) of Notepad2 version 3.1.21 has been
+released. Some new features have slipped in:
+
+Notepad2 now accepts multiple files from the command line. The primary
+instance will act as a shell and simply launch new instances of
+Notepad2 with the --n command line switch (always open a new window;
+there may be support for other switches like --rs in the future). This
+requires filenames containing spaces to be quoted. To open just a
+single file without quoted spaces, as in previous versions of
+Notepad2, the new --1 command line switch can be used. Examples:
+
+  Notepad2.exe test sample instance
+  (opens the files "test", "sample" and "instance")
+
+  Notepad2.exe --1 test sample instance
+  (opens the file "test sample instance")
+
+With the new behaviour, multiple files can be dropped on Notepad2.exe
+icons, or opened with Notepad2 if used from the "Send to" menu.
+
+Another detail change also improves usage of Notepad2 from Windows
+Explorer: the "Reuse Window" option now has a timeout, during which
+Notepad2 windows are locked for reuse. This allows simultaneous
+opening of multiple files even if the "Reuse Window" option is
+enabled.
+
+There's some enhancements to the /p command line switches: using any
+combination of f,l,t,r,b,m allows to move the Notepad2 window to a
+certain position on the primary monitor. A few examples:
+
+  Notepad2.exe --pr
+  (use right half of working area)
+
+  Notepad2.exe --pltm
+  (display in left top corner, with small margin)
+
+  Notepad2.exe --pdl
+  (use default Notepad2 window position, align left)
+
+To make it easier to distinguish Notepad2 windows with untitled
+documents (or maybe even with opened files), the window title can be
+set to an excerpt of the currently selected text (Ctrl+9). The default
+title is restored if Ctrl+9 is pressed again with an empty text
+selection, or if the document is being saved. It's also possible to
+set a custom window title from the command line:
+
+  Notepad2.exe --t "My Notes"
+
+(The original --t command line switch to select the default text
+scheme has been renamed to --d).
+
+Various minor changes: the "Search Up" option of the find and replace
+dialogs has been replaced by a "Find Previous" button. There's a new
+option to automatically strip trailing blanks when saving files (File,
+Line Endings, Default). Files can be reloaded without file variable
+parsing (Alt+F8). And, the "Save Copy" directory is remembered until
+exit.
+
+Internal changes should restore binary compatibility with Windows
+2000, and assure basic source code compatibility with x64
+environments.
+
+The complete changelog is detailed in the Notepad2 readme file.
+
+Download from the Notepad2 website:
+
+  http://www.flos-freeware.ch/notepad2.html
+
+Best wishes,
+--flo
+
+
+----------------------------------------------------------------------
+
+
+[flos-freeware] Release Candidate: Notepad2 Version 3.1.21
+From: Florian Balmer <florian.balmer@xxxxxxxxx>
+To: flos-freeware@xxxxxxxxxxxxx
+Date: Sat, 24 Jan 2009 17:22:05 +0100
+
+
+Dear subscribers of this newsletter,
+
+Notepad2 version 3.1.21 is now available as a "Release Candidate". The
+final version is planned for the next few days to weeks.
+
+My favorite changes are the move up and down commands now working with
+selected text blocks (and not just single lines), and the new hotkeys
+to have the cursor jump to either side of the text selection, so it
+can be easily expanded. There's also a new command to sort lines,
+support for URL encoding and decoding, and a hotkey for "Replace Next"
+(F4).
+
+Besides a few memory holes being closed, and some detail improvements,
+the following modifications deserve a special consideration:
+
+By default, Notepad2 will no longer create an ini-file. If no existing
+ini-file is found, the program settings have to be saved manually
+(F7), the first time.
+
+And, there's new command line switches to specify the file encoding
+and line ending mode, for example:
+
+  Notepad2.exe --utf8 --lf file.txt
+
+The complete changelog is detailed in the Notepad2 readme file.
+
+Available here:
+
+  http://www.flos-freeware.ch/notepad2.html
+
+Best wishes,
+--flo
+
+
+----------------------------------------------------------------------
+
+
+[flos-freeware] New Release: Notepad2 Version 3.0.20
+From: "Florian Balmer" <florian.balmer@xxxxxxxxx>
+To: flos-freeware@xxxxxxxxxxxxx
+Date: Fri, 31 Oct 2008 13:39:33 +0100
+
+
+Dear subscribers of this newsletter,
+
+Notepad2 version 3.0.20 is ready. It's a major update to turn Notepad2
+into a native Win32 Unicode application. There's also some new editing
+commands, as well as many detail improvements and bug fixes.
+
+  http://www.flos-freeware.ch/notepad2.html
+
+Best wishes,
+--flo
+
+
+----------------------------------------------------------------------
+
+
+[flos-freeware] Update: Converting Notepad2 to Unicode
+From: "Florian Balmer" <florian.balmer@xxxxxxxxx>
+To: flos-freeware@xxxxxxxxxxxxx
+Date: Fri, 22 Aug 2008 11:45:39 +0200
+
+
+Dear subscribers of this newsletter,
+
+What has started as a project to convert Notepad2 to a native Win32
+Unicode application, has evolved to a new version with additional
+features. The first release candidate (rc1) of Notepad2 version 3.0
+has been released and can be downloaded from the Notepad2 website. The
+included readme file details the changes.
+
+  http://www.flos-freeware.ch/notepad2.html
+
+The final version is planned for the next few days to weeks.
+
+Best wishes,
+--flo
+
+
+----------------------------------------------------------------------
+
+
+[flos-freeware] Update: The Spirit of Open Source
+From: "Florian Balmer" <florian.balmer@xxxxxxxxx>
+To: flos-freeware@xxxxxxxxxxxxx
+Date: Sun, 6 Jul 2008 14:33:05 +0200
+
+
+http://www.flos-freeware.ch/doc/The-Spirit-of-Open-Source.html#update
+--Florian
+
+
+----------------------------------------------------------------------
+
+
+[flos-freeware] The Spirit of Open Source
+From: "Florian Balmer" <florian.balmer@xxxxxxxxx>
+To: flos-freeware@xxxxxxxxxxxxx
+Date: Mon, 30 Jun 2008 13:39:42 +0200
+
+
+http://www.flos-freeware.ch/doc/The-Spirit-of-Open-Source.html
+--Florian
+
+
+----------------------------------------------------------------------
+
+
+[flos-freeware] Converting Notepad2 to Unicode
+From: "Florian Balmer" <florian.balmer@xxxxxxxxx>
+To: flos-freeware@xxxxxxxxxxxxx
+Date: Wed, 23 Apr 2008 14:39:50 +0200
+
+
+Dear subscribers of this newsletter,
+
+There's some work in progress on converting Notepad2 to a native Win32
+Unicode application. Links to current downloads and more information
+can be found on the Notepad2 website:
+
+  http://www.flos-freeware.ch/notepad2.html
+
+Best wishes,
+--flo
+
+
+----------------------------------------------------------------------
+
+
+[flos-freeware] New Release: Notepad2 Version 2.1.19
+From: "Florian Balmer" <florian.balmer@xxxxxxxxx>
+To: flos-freeware@xxxxxxxxxxxxx
+Date: Thu, 10 Apr 2008 14:05:59 +0200
+
+
+Dear subscribers of this newsletter,
+
+Notepad2 version 2.1.19 has just been released. There's some new
+features and many detail improvements and bug fixes, however it's
+still simple and light-weight.
+
+There's new commands to comment and uncomment source code, change
+letter case, and the original Notepad .LOG feature is now supported.
+The long line marker can easily be moved with the keyboard. The
+ini-file provides a new option to specify filters for the open and
+save dialogs. New command line switches can be used to specify the
+location of the ini-file (or use no ini-file at all), and to open a
+new window using a system default window position. Compatibility with
+Windows Vista has been improved (Notepad2 has been made aware of file
+virtualization), and the toolbar buttons look somewhat smoother.
+
+Download from the Notepad2 website:
+
+  http://www.flos-freeware.ch/notepad2.html
+
+For the time being, I have decided I will no longer host or maintain a
+list of links to translated versions of Notepad2.
+
+Best wishes,
+--flo
+
+
+----------------------------------------------------------------------
+
+
+[flos-freeware] Minor updates for Project Archive
+From: "Florian Balmer" <florian.balmer@xxxxxxxxx>
+To: flos-freeware@xxxxxxxxxxxxx
+Date: Wed, 2 Apr 2008 23:51:22 +0200
+
+
+Dear subscribers of this newsletter,
+
+I have just released several minor updates for some of the tools in my
+Project Archive. The most important is a new version of metapath
+(3.2.09) with support for ini-file storage of the program settings, so
+it works the same as Notepad2. For the other tools, there's just a few
+fixes of visual glitches (list view columns) and additions (manifest
+resources) for Vista.
+
+  http://www.flos-freeware.ch/archive.html
+
+Best wishes,
+--flo
+
+
+----------------------------------------------------------------------
+
+
+[flos-freeware] New Release: Notepad2 Version 2.0.18
+From: "Florian Balmer" <florian.balmer@xxxxxxxxx>
+To: flos-freeware@xxxxxxxxxxxxx
+Date: Thu, 26 Jul 2007 10:53:01 +0200
+
+
+Dear subscribers of this newsletter,
+
+Having a few days off, I'm spending some more time on my hobby, so
+here's Notepad2 version 2.0.18 with the following new features:
+
+* Ability to expand the selection to the specified text
+* Swap command to exchange the selection with the clipboard text
+
+Download:
+
+ http://www.flos-freeware.ch/notepad2.html
+
+Have a nice day,
+--flo
+
+
+----------------------------------------------------------------------
+
+
+[flos-freeware] New Release: Notepad2 Version 2.0.17
+From: "Florian Balmer" <florian.balmer@xxxxxxxxx>
+To: flos-freeware@xxxxxxxxxxxxx
+Date: Tue, 24 Jul 2007 17:31:49 +0200
+
+
+Dear subscribers of this newsletter,
+
+Notepad2 version 2.0.17 is out. This is mainly a maintenance release
+to fix bugs. The most important new feature is an option allow only
+one instance of each file to be opened in Notepad2, at the same time
+(i.e. prevent opening the same file in multiple Notepad2 windows).
+And, there's a new setting to display the filename followed by the
+directory in the window title.
+
+Download from the Notepad2 website:
+
+ http://www.flos-freeware.ch/notepad2.html
+
+All the best,
+--flo
+
+
+----------------------------------------------------------------------
+
+
+[flos-freeware] New Release: Notepad2 Version 2.0.16
+From: "Florian Balmer" <florian.balmer@xxxxxxxxx>
+To: flos-freeware@xxxxxxxxxxxxx
+Date: Mon, 14 May 2007 18:42:29 +0200
+
+
+Dear subscribers of this newsletter,
+
+Notepad2 version 2.0.16 has just been released. This is only a minor
+update to fix some bugs and remove the dependency on the msvcr70.dll
+runtime library.
+
+The new version is available from the Notepad2 website:
+
+ http://www.flos-freeware.ch/notepad2.html
+
+Greetings,
+--flo
+
+
+----------------------------------------------------------------------
+
+
+[flos-freeware] New Release: Notepad2 Version 2.0.15
+From: "Florian Balmer" <florian.balmer@xxxxxxxxx>
+To: flos-freeware@xxxxxxxxxxxxx
+Date: Sat, 7 Apr 2007 22:46:14 +0200
+
+
+Dear subscribers of this newsletter,
+
+After almost three years, a new version of Notepad2 has just been
+released. Version 2.0.15 is a major update with a lot of new and
+improved features. The most important are support for ini-file storage
+of the program settings, modeless find and replace dialogs, multiline
+find and replace operations, optional file change notification, and
+many more. Nevertheless, Notepad2 is still a fast and light-weight
+text editor.
+
+To see the complete list of changes, and download the new version,
+please visit the Notepad2 homepage:
+
+ http://www.flos-freeware.ch/notepad2.html
+
+And, I've added another of my daily used little helpers to the project
+archive. It's called scal, Simple Calendar Utility, and just displays
+a calendar on the desktop. Find it here:
+
+ http://www.flos-freeware.ch/archive.html
+
+Thanks to everybody for sending me bug reports and other interesting
+feedback!
+
+Best wishes,
+--flo
+
+
+----------------------------------------------------------------------
+
+
+[flos-freeware] Mailing List
+From: "Florian Balmer" <textview@xxxxxxxxxx>
+To: <flos-freeware@xxxxxxxxxxxxx>
+Date: Sat, 19 Feb 2005 18:18:04 +0100
+
+
+This mailing list will provide you with announcements of
+updates on http://www.flos-freeware.ch, including new
+releases of Notepad2. Minor changes like updates to the
+web-site or the FAQs etc. are not posted, so traffic
+will be very low.
+
+--Florian Balmer
+
+
+###
