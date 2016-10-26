@@ -69,7 +69,7 @@ build:
   verbosity: minimal
 test: off
 artifacts:
-- path: bin\*
+- path: C:\projects\notepad2-mod\bin\*
   name: All
 deploy:
 - provider: S3
