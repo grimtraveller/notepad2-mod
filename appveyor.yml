@@ -68,8 +68,10 @@ build:
   parallel: true
   verbosity: minimal
 test: off
+
+# Artifact paths are relative to C:\projects\notepad2-mod\
 artifacts:
-- path: C:\projects\notepad2-mod\bin\*
+- path: bin\**\*.*
   name: All
 deploy:
 - provider: S3
